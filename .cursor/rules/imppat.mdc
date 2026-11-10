@@ -6,7 +6,8 @@ alwaysApply: true
 
 - Lee `AGENTS.md` y el documento de `docs/` que corresponda antes de escribir código.
 - La fuente de verdad visual es `docs/design-reference/*.html`. Replica medidas, colores, tipografía y textos; ignora las anotaciones `.tag` (etiquetas magenta) y los textos `Foto sugerida · …`.
-- Stack fijo: Vite + React + TypeScript strict + Tailwind 3 + shadcn/ui (radius 0) + React Router 6 + TanStack Query + Supabase + React Hook Form/Zod + react-helmet-async.
+- Stack fijo: Vite 7 + React 19 + TypeScript 5.8 strict + Tailwind 3 + shadcn/ui (radius 0) + React Router 6 + TanStack Query + Supabase + React Hook Form/Zod 4 + react-helmet-async.
+- Comandos para el usuario en PowerShell. Supabase CLI local: `npx supabase ...`.
 - Esquinas cuadradas siempre. Nunca líneas divisorias entre título y texto.
 - Títulos: Source Serif 4. Texto/UI: Montserrat. Colores solo desde tokens de Tailwind (`navy`, `brand`, `sky`, `ink`, `muted`, `tint`, `line`; ver `docs/02-design-system.md`).
 - Textos en español de México, tratamiento de usted. Contenido estático en `src/content/`, contenido editable desde Supabase.

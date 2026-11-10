@@ -10,9 +10,9 @@ El diseño aprobado está en `docs/design-reference/*.html` (exportado del canva
 
 ## Stack (no cambiar sin aprobación)
 
-- Vite + React (18 o 19, la que instale la plantilla) + TypeScript (strict)
+- Vite 7 + React 19 + TypeScript 5.8 (strict). No actualizar a Vite 8 ni a TypeScript 7 sin aprobación (rompen la plantilla y typescript-eslint).
 - Tailwind CSS 3 + shadcn/ui (Radix) — con `--radius: 0`
-- React Router 6 (`createBrowserRouter`)
+- React Router 6 (`react-router-dom@6`, `createBrowserRouter`). No migrar a v7.
 - TanStack Query 5 para datos remotos
 - Supabase (Postgres, Auth, Storage, Edge Functions) + Resend para correos
 - React Hook Form + Zod para formularios
@@ -44,6 +44,13 @@ El diseño aprobado está en `docs/design-reference/*.html` (exportado del canva
 - Accesibilidad: HTML semántico, foco visible, `aria-*` en carrusel/acordeones/menú, contraste AA.
 - No instalar dependencias nuevas sin explicar por qué.
 - Variables de entorno solo con prefijo `VITE_` en el cliente; nunca exponer la service role key.
+- Zod 4: usar la API de v4 (`z.email()`, `error` en lugar de `message`/`errorMap`) junto con `@hookform/resolvers` v5+.
+
+## Entorno de desarrollo
+
+- Windows + **PowerShell**: todos los comandos que se den al usuario deben ser de PowerShell (sin `&&` ni `\` para continuar líneas; usar `;` y el acento grave `` ` ``).
+- Supabase CLI está instalado como dependencia de desarrollo del proyecto: siempre `npx supabase ...` (no hay instalación global).
+- Para generar tipos usar `npm run db:types` (evita que PowerShell guarde el archivo en UTF-16 con `>`).
 
 ## Cómo trabajar
 

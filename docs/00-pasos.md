@@ -8,11 +8,14 @@ Trabaja **una fase por chat** de Cursor (modo Agent), adjuntando con `@` los doc
 
 ## Fase 0 · Preparación (manual, ~20 min)
 
-Requisitos: Node 20 LTS o superior, Git, cuenta de GitHub, Supabase y Vercel, Supabase CLI (`npm i -g supabase`).
+Requisitos: Node 20 LTS o superior, Git, cuenta de GitHub, Supabase y Vercel. Los comandos son de **PowerShell**.
 
-```bash
+> **Estado: completada.** Versiones resultantes: Vite 7, React 19, TypeScript 5.8, Tailwind 3.4, React Router 6, Zod 4, Supabase CLI 3 (local).
+
+```powershell
 # 1. Crear el proyecto
-npm create vite@latest imppat-web -- --template react-swc-ts
+# create-vite@latest (v9) ya no trae la plantilla react-swc-ts y usa TypeScript 7: fijar v7.
+npm create vite@7 imppat-web -- --template react-swc-ts --no-interactive
 cd imppat-web
 npm install
 
@@ -20,24 +23,27 @@ npm install
 npm i -D tailwindcss@3 postcss autoprefixer tailwindcss-animate @tailwindcss/typography @types/node
 npx tailwindcss init -p --ts
 
-# 3. Dependencias del proyecto
-npm i react-router-dom @tanstack/react-query @supabase/supabase-js react-hook-form zod @hookform/resolvers \
-  react-helmet-async lucide-react clsx tailwind-merge class-variance-authority date-fns dompurify \
+# 3. Dependencias del proyecto (React Router fijo en v6)
+npm i react-router-dom@6 @tanstack/react-query @supabase/supabase-js react-hook-form zod @hookform/resolvers `
+  react-helmet-async lucide-react clsx tailwind-merge class-variance-authority date-fns dompurify `
   @fontsource-variable/source-serif-4 @fontsource-variable/montserrat
 
-# 4. Git
-git init && git add -A && git commit -m "chore: scaffold Vite + React + TS"
+# 4. Supabase CLI local (Supabase ya no permite `npm i -g supabase`); se usa con `npx supabase ...`
+npm i -D supabase
+
+# 5. Git
+git init -b main; git add -A; git commit -m "chore: scaffold Vite + React + TS"
 ```
 
-5. **Copia el kit** dentro de la raíz del proyecto (respetando carpetas):
+6. **Copia el kit** dentro de la raíz del proyecto (respetando carpetas):
    - `AGENTS.md` → raíz
    - `.cursor/rules/imppat.mdc` → `.cursor/rules/`
    - `docs/` → `docs/` (incluye `design-reference/`)
    - `src/assets/` → `src/assets/`
-6. Abre la carpeta en Cursor. Verifica en *Settings → Rules* que aparece la regla `imppat` (Always).
-7. Crea el proyecto en Supabase (región más cercana a México) y guarda URL y anon key. Copia `.env.example` a `.env.local` (lo crea la Fase 1).
+7. Abre la carpeta en Cursor. Verifica en *Settings → Rules* que aparece la regla `imppat` (Always).
+8. Crea el proyecto en Supabase (región más cercana a México) y guarda URL y anon key. Copia `.env.example` a `.env.local` (lo crea la Fase 1): `Copy-Item .env.example .env.local`.
 
-> shadcn/ui con Tailwind 3: usa la versión del CLI compatible con v3 (`npx shadcn@2.3.0 init`). Si prefieres Tailwind 4, avisa al agente y adapta `02-design-system.md` (los tokens se mueven a `@theme` en CSS).
+> shadcn/ui con Tailwind 3: usa la versión del CLI compatible con v3 (`npx shadcn@2.3.0 init`). Con React 19, si el CLI pregunta cómo resolver dependencias con npm, elige `--legacy-peer-deps`. Si prefieres Tailwind 4, avisa al agente y adapta `02-design-system.md` (los tokens se mueven a `@theme` en CSS).
 
 ---
 
@@ -93,22 +99,24 @@ Adjunta: `@docs/03-paginas.md @docs/design-reference/03-servicios.html @docs/des
 Adjunta: `@docs/05-backend-supabase.md @docs/03-paginas.md @docs/design-reference/08-contacto.html`
 
 ```
-1. Inicializa Supabase en el repo (supabase init), crea supabase/migrations/0001_init.sql y supabase/seed.sql exactamente como docs/05-backend-supabase.md §2 y §3.
+1. Inicializa Supabase en el repo (npx supabase init), crea supabase/migrations/0001_init.sql y supabase/seed.sql exactamente como docs/05-backend-supabase.md §2 y §3.
 2. Crea la Edge Function supabase/functions/submit-contact según §4 (con json(), sha256(), renderLeadEmail() y escape de HTML).
 3. Construye /contacto según docs/03 §8: formulario con React Hook Form + Zod (campos y reglas de la tabla), preselección por ?servicio=, honeypot, envío con supabase.functions.invoke, estados de carga/éxito/error, aside de canales y sección de cobertura con el mapa y los 4 marcadores en porcentaje.
-4. Genera los tipos: supabase gen types typescript.
-Dame al final la lista de comandos que debo correr yo (db push, secrets, deploy de la función).
+4. Genera los tipos con npm run db:types (src/types/database.types.ts).
+Dame al final la lista de comandos que debo correr yo (db push, secrets, deploy de la función), en PowerShell y con npx supabase.
 ```
 
-Comandos que correrás tú (referencia):
+Comandos que correrás tú (referencia, PowerShell):
 
-```bash
-supabase login
-supabase link --project-ref <ref>
-supabase db push
-supabase secrets set RESEND_API_KEY=... CONTACT_TO_EMAIL=contacto@impulsapatrimonial.com CONTACT_FROM_EMAIL="Sitio web <web@impulsapatrimonial.com>" IP_SALT=... ALLOWED_ORIGIN=https://impulsapatrimonial.com
-supabase functions deploy submit-contact --no-verify-jwt
-psql "<connection string>" -f supabase/seed.sql   # o pegarlo en el SQL Editor
+```powershell
+npx supabase login
+npx supabase link --project-ref <ref>
+npx supabase db push
+npx supabase secrets set RESEND_API_KEY=... CONTACT_TO_EMAIL=contacto@impulsapatrimonial.com `
+  "CONTACT_FROM_EMAIL=Sitio web <web@impulsapatrimonial.com>" IP_SALT=... ALLOWED_ORIGIN=https://impulsapatrimonial.com
+npx supabase functions deploy submit-contact --no-verify-jwt
+npm run db:types
+# seed.sql: pégalo en el SQL Editor del dashboard (psql no viene instalado en Windows)
 ```
 
 ## Fase 6 · Blog

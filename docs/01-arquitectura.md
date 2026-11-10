@@ -17,19 +17,21 @@ Navegador ──► Vercel (SPA estática, prerender opcional)
 
 | Necesidad | Paquete |
 |---|---|
-| Build y dev server | `vite`, `@vitejs/plugin-react-swc` |
-| Lenguaje | `typescript` (strict) |
+| Build y dev server | `vite@7`, `@vitejs/plugin-react-swc` |
+| UI | `react@19`, `react-dom@19` |
+| Lenguaje | `typescript@~5.8` (strict). No subir a TypeScript 7 hasta que lo soporte `typescript-eslint` |
 | Estilos | `tailwindcss@3`, `postcss`, `autoprefixer`, `tailwindcss-animate`, `@tailwindcss/typography` |
 | Componentes base | shadcn/ui (Radix): `button`, `input`, `textarea`, `select`, `checkbox`, `label`, `form`, `accordion`, `sheet`, `navigation-menu`, `dialog`, `toast/sonner`, `table`, `tabs`, `dropdown-menu`, `badge`, `switch` |
-| Rutas | `react-router-dom@6` |
+| Rutas | `react-router-dom@6` (fijo; npm instala v7 si no se indica la versión) |
 | Datos remotos | `@tanstack/react-query@5`, `@supabase/supabase-js@2` |
-| Formularios | `react-hook-form`, `zod`, `@hookform/resolvers` |
+| Formularios | `react-hook-form`, `zod@4`, `@hookform/resolvers` |
 | SEO | `react-helmet-async` |
 | Íconos | `lucide-react` |
 | Fuentes self-hosted | `@fontsource-variable/source-serif-4`, `@fontsource-variable/montserrat` |
 | Editor del blog (admin) | `@tiptap/react`, `@tiptap/starter-kit`, `@tiptap/extension-link`, `@tiptap/extension-image` |
 | Sanitizar HTML del blog | `dompurify` |
 | Utilidades | `clsx`, `tailwind-merge`, `date-fns` (locale `es`) |
+| Supabase CLI (dev) | `supabase` como devDependency; se ejecuta con `npx supabase ...` |
 
 > Las fuentes se sirven desde el propio bundle (no Google Fonts) para rendimiento y privacidad. IBM Plex Mono **no** se usa en el sitio público (solo era para anotaciones del diseño).
 
@@ -144,7 +146,7 @@ Las páginas legales comparten `Legal.tsx`; la barra lateral "Documentos" navega
 ## 5. Capa de datos
 
 - `src/lib/supabase.ts` crea el cliente con `VITE_SUPABASE_URL` y `VITE_SUPABASE_ANON_KEY`.
-- Tipos generados: `supabase gen types typescript --project-id <id> > src/types/database.types.ts`.
+- Tipos generados: `npm run db:types` (ejecuta `supabase gen types typescript --linked` y escribe `src/types/database.types.ts`; requiere `npx supabase link` previo). No usar `>` directamente en PowerShell 5: guarda el archivo en UTF-16.
 - Un hook por consulta en `src/hooks/queries/`, con claves estables: `['posts', filters]`, `['post', slug]`, `['activities']`, `['activity', slug]`, `['leads', filters]`.
 - `staleTime` de 5 min para contenido público.
 - Estados de carga con skeletons cuadrados del mismo tamaño que la card final; errores con mensaje amable y enlace a Contacto.
@@ -177,7 +179,7 @@ Secretos de la Edge Function (en Supabase, nunca en el cliente): `RESEND_API_KEY
 
 - Repo en GitHub → Vercel (preset Vite). `vercel.json` con rewrite de todas las rutas a `/index.html`.
 - Ramas: `main` = producción, `develop` = preview.
-- Supabase: un proyecto de producción. Migraciones con Supabase CLI (`supabase db push`).
+- Supabase: un proyecto de producción. Migraciones con Supabase CLI (`npx supabase db push`).
 - Dominio `impulsapatrimonial.com` en Vercel; correos de Resend con dominio verificado (SPF/DKIM).
 
 ## 9. SEO de una SPA (decisión)
