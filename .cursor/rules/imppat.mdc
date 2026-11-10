@@ -11,5 +11,6 @@ alwaysApply: true
 - Esquinas cuadradas siempre. Nunca líneas divisorias entre título y texto.
 - Títulos: Source Serif 4. Texto/UI: Montserrat. Colores solo desde tokens de Tailwind (`navy`, `brand`, `sky`, `ink`, `muted`, `tint`, `line`; ver `docs/02-design-system.md`).
 - Textos en español de México, tratamiento de usted. Contenido estático en `src/content/`, contenido editable desde Supabase.
+- Colores con transparencia: clases CSS con `rgba()` explícito o `bg-[rgba(...)]`; no usar modificadores `/NN` fuera de la escala de Tailwind.
 - Todas las animaciones respetan `prefers-reduced-motion`.
 - Al terminar: `npm run lint` y `npm run build` sin errores.

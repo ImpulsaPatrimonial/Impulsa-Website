@@ -82,7 +82,30 @@ export default {
 
 En `index.css` define `--radius: 0rem;` para shadcn y sus variables de color apuntando a la paleta (primary = navy, ring = brand).
 
+### Opacidades de Tailwind 3
+
+Tailwind 3 **no** genera modificadores arbitrarios de opacidad fuera de su escala por defecto. Extiende siempre `theme.extend.opacity` con los valores del diseño antes de usar clases como `border-white/18` o `bg-white/88`:
+
+```ts
+opacity: {
+  6: '.06',
+  8: '.08',
+  14: '.14',
+  16: '.16',
+  18: '.18',
+  22: '.22',
+  35: '.35',
+  55: '.55',
+  62: '.62',
+  86: '.86',
+  88: '.88',
+}
+```
+
+Si falta el token, la clase se ignora y el borde/color hereda el valor por defecto (p. ej. `border-border`), no el `rgba` de la referencia. Preferir `border-white/18` (con el token) frente a `border-[rgba(255,255,255,0.18)]` cuando el valor está en esta lista.
+
 ### Tipografía
+
 
 | Estilo | Fuente | Tamaño / interlineado | Notas |
 |---|---|---|---|
@@ -169,7 +192,8 @@ Inputs y selects: fondo `tint`, sin borde visible o borde `line`, `min-h-[52px]`
 ### Navbar y Footer
 
 Ver `04-interacciones.md` (estados) y `03-paginas.md` (contenido). Medidas clave:
-- Navbar inicial: transparente, borde inferior blanco 14 %, padding 22 px, logo horizontal blanco 42 px de alto, links blanco 86 %, botón `white` "Contactar ↗" 46 px.
-- Navbar con scroll: blanco 88 % + `backdrop-blur(14px)` + sombra `0 8px 30px rgba(12,28,52,.08)`, padding 14 px, logo a color 38 px, links `navy`, botón `primary` 44 px.
-- Link activo: inicial blanco con subrayado inset 1 px; con scroll `brand` con subrayado `brand`.
+- Navbar inicial: transparente **sin** borde inferior, padding 22 px, logo horizontal blanco 42 px de alto, links blanco 86 % (hover/activo 100 %), botón `white` "Contactar ↗" 46 px.
+- Navbar con scroll: blanco 88 % + `backdrop-blur(14px)` + borde inferior `navy` 8 % + sombra `0 8px 30px rgba(12,28,52,.08)`, padding 14 px, logo a color 38 px, links `navy`, botón `primary` 44 px.
+- Link activo: inicial blanco 100 % con subrayado inset 1 px; con scroll `brand` con subrayado `brand`.
+
 - Footer: fondo `navy-deep` + capa de degradado (`.fimg`), logo horizontal blanco 60 px de alto (ancho automático), frase serif 30 px, botón `ghostDark` "Agendar asesoría ↗"; a la derecha rejilla 2×2: [Sitio / Servicios] y [Oficinas / Contacto + redes]; barra inferior con © y links legales. **Sin** las letras "IMPPAT" gigantes.

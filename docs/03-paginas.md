@@ -13,15 +13,22 @@ Convenciones:
 
 ### Navbar (`layout/Navbar.tsx`)
 - Logo (enlace a `/`), menú: Inicio · Quiénes somos · Servicios ▾ · Actividades vulnerables · Blog · botón "Contactar ↗" (`/contacto`). No hay link "Contacto" en el menú.
-- **Servicios ▾** abre un panel desplegable (hover con retardo de 120 ms y clic/teclado) con 4 opciones, cada una con título y descripción:
-  - Prevención de Lavado de Dinero — Actividades vulnerables y sector financiero *(línea lateral `brand`)*
-  - Precios de Transferencia — Operaciones con partes relacionadas *(línea lateral `brand`)*
-  - Legal Corporativo — Constitución, operación y reorganización *(línea lateral `line`)*
-  - Soluciones complementarias — Fiscal, contable, litigio y auditoría *(línea lateral `line`, va a `/servicios#complementarios`)*
-  - Diseño del panel: franja blanca a todo el ancho bajo el navbar, sombra suave, rejilla de 4 columnas (ver bloque "Referencia: menú desplegable" en `03-servicios.html`; **ese bloque es solo referencia, no se renderiza en la página Servicios**).
+- **Estado transparente** (sin scroll): sin línea inferior; todos los links en blanco al 86 %; hover y activo en blanco al 100 %; el activo lleva subrayado inset de 1 px blanco y `font-semibold`. "Servicios ▾" usa exactamente el mismo estilo que el resto (sin fondo ni estilos de `navigationMenuTriggerStyle`).
+- **Estado con scroll** (> 48 px): links navy; activo en `brand` con subrayado `brand`; mismo tratamiento visual para "Servicios ▾".
+- **Servicios ▾**
+  - El texto "Servicios" es un enlace a `/servicios` (clic = navega). Se marca activo en `/servicios` y en `/servicios/*`.
+  - El desplegable se abre con hover (retardo 120 ms), con la flecha ▾ o con `ArrowDown` desde el teclado; `Esc` lo cierra.
+  - Panel: franja blanca a todo el ancho bajo el navbar, sombra suave, rejilla de 4 columnas; arriba a la derecha el enlace "Ver todos los servicios →" (`/servicios`), útil en táctil. (El bloque "Referencia: menú desplegable" de `03-servicios.html` es solo referencia y **no** se renderiza en la página Servicios.)
+  - Opciones y rutas:
+    - Prevención de Lavado de Dinero — Actividades vulnerables y sector financiero → `/servicios/prevencion-de-lavado-de-dinero` *(línea lateral `brand` en reposo)*
+    - Precios de Transferencia — Operaciones con partes relacionadas → `/servicios/precios-de-transferencia` *(línea lateral `brand` en reposo)*
+    - Legal Corporativo — Constitución, operación y reorganización → `/servicios/legal-corporativo` *(línea lateral `line` en reposo)*
+    - Soluciones complementarias — Fiscal, contable, litigio y auditoría → `/servicios#complementarios` *(línea lateral `line` en reposo)*
+  - Estados de cada opción (bloque con línea lateral 2 px): hover/`focus-visible` → fondo `tint`, línea `brand`, título `brand` y flecha `→` a la derecha del título con `translate-x` 4 px (transición 180 ms); página actual → fondo `tint`, línea `brand` y `aria-current="page"`; `cursor-pointer` y foco visible (`outline` 2 px `brand`, offset 2 px).
 - "Actividades vulnerables" lleva a `/actividades-vulnerables`.
-- Móvil (≤900 px): botón hamburguesa → `Sheet` lateral a pantalla completa con los mismos enlaces, Servicios como sub-lista, y el botón Contactar al final.
+- Móvil (≤900 px): botón hamburguesa → `Sheet` lateral a pantalla completa; "Servicios" enlaza a `/servicios` y debajo muestra las 4 opciones; botón Contactar al final.
 - Estados de scroll: ver `04-interacciones.md`.
+
 
 ### Footer (`layout/Footer.tsx`)
 Referencia: cualquier página (todas usan el mismo footer).

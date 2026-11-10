@@ -40,6 +40,7 @@ El diseño aprobado está en `docs/design-reference/*.html` (exportado del canva
 - Contenido estático (servicios, metodología, sectores, etc.) en `src/content/*.ts`, nunca hardcodeado dentro del JSX de las páginas.
 - Contenido editable por el cliente (blog, actividades vulnerables, leads) viene de Supabase vía hooks en `src/hooks/queries/`.
 - Estilos con clases de Tailwind usando los tokens del `tailwind.config.ts`. Evitar valores arbitrarios repetidos: si se repite, crear token o componente.
+- Colores con transparencia: usar clases CSS con `rgba()` explícito o valores arbitrarios `bg-[rgba(...)]`; no usar modificadores `/NN` fuera de la escala de Tailwind.
 - Imágenes estáticas desde `src/assets/` con `import` (Vite genera hash). Siempre con `alt` descriptivo, `width`/`height` o `aspect-ratio`, y `loading="lazy"` salvo el hero.
 - Accesibilidad: HTML semántico, foco visible, `aria-*` en carrusel/acordeones/menú, contraste AA.
 - No instalar dependencias nuevas sin explicar por qué.

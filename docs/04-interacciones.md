@@ -9,8 +9,9 @@ Reglas generales:
 ## 1. Navbar con dos estados — `useScrolled(48)`
 
 - Contenedor `sticky top-0 z-50 h-0` para que el navbar quede **sobre** el hero sin empujar el contenido.
-- `scrollY ≤ 48`: transparente, logo horizontal **blanco**, links blancos, botón blanco.
-- `scrollY > 48`: fondo `rgba(255,255,255,.88)` + `backdrop-blur-[14px]`, borde inferior `rgba(22,50,91,.08)`, sombra `0 8px 30px rgba(12,28,52,.08)`, logo horizontal **a color**, links navy, botón primario. Padding vertical 22 → 14 px.
+- `scrollY ≤ 48`: transparente **sin** borde inferior, logo horizontal **blanco**, links blanco 86 % (hover/activo 100 %), botón blanco.
+- `scrollY > 48`: fondo `rgba(255,255,255,.88)` / `bg-white/88` + `backdrop-blur-[14px]`, borde inferior `rgba(22,50,91,.08)` / `border-navy/8`, sombra `0 8px 30px rgba(12,28,52,.08)`, logo horizontal **a color**, links navy, botón primario. Padding vertical 22 → 14 px.
+
 - Transición 250 ms en fondo, sombra y padding. Cambiar el logo con crossfade (dos `<img>` superpuestas) para evitar parpadeo.
 - Listener de `scroll` pasivo + `requestAnimationFrame`.
 - Todas las páginas públicas tienen hero oscuro, así que el estado inicial siempre es el transparente. En el admin y 404 sin hero, usar directamente el estado sólido (`forceSolid`).
