@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Contacto — Impulsa Patrimonial</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&amp;family=Montserrat:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#fff}
+a{color:#005E9D}a:hover{color:#16325B}
+.wf{font-family:'Montserrat',system-ui,sans-serif;color:#3A4552;background:#fff;font-size:16px;line-height:1.7}
+.wf *{box-sizing:border-box}
+.wf h1,.wf h2,.wf h3{font-family:'Source Serif 4',Georgia,serif;font-weight:400;color:#16325B;margin:0;letter-spacing:-.01em}
+.wrap{max-width:1200px;margin:0 auto;padding-left:32px;padding-right:32px}
+.eb{display:inline-flex;align-items:center;gap:14px;font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#005E9D}
+.eb::before{content:"";width:32px;height:1px;background:currentColor;display:block}
+.lbl{font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#005E9D}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 28px;background:#16325B;color:#fff;text-decoration:none;font-weight:600;font-size:14px;letter-spacing:.04em;border:1px solid #16325B}
+.btn:hover{color:#fff;background:#005E9D;border-color:#005E9D}
+.btnw{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 28px;background:#fff;color:#16325B;text-decoration:none;font-weight:600;font-size:14px;letter-spacing:.04em;border:1px solid #fff}
+.btnw:hover{color:#16325B;background:#E8EEF5}
+.btno{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 28px;background:rgba(255,255,255,.06);color:#fff;text-decoration:none;font-weight:600;font-size:14px;letter-spacing:.04em;border:1px solid rgba(255,255,255,.55)}
+.btno:hover{color:#fff;background:rgba(255,255,255,.14)}
+.lnk{display:inline-flex;align-items:center;gap:8px;color:#005E9D;font-weight:600;font-size:14px;letter-spacing:.03em;text-decoration:none}
+.hero-img{position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,28,52,.72) 0%,rgba(12,28,52,.22) 38%,rgba(12,28,52,.9) 100%),repeating-linear-gradient(115deg,rgba(255,255,255,.03) 0 2px,transparent 2px 26px),linear-gradient(125deg,#3A6496 0%,#1D4070 45%,#0E2342 100%)}
+.hcap{position:absolute;right:32px;top:116px;z-index:2;max-width:320px;text-align:right;font-family:'IBM Plex Mono',monospace;font-size:11px;line-height:1.5;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.62)}
+.hbadge{display:inline-flex;align-items:center;gap:10px;align-self:flex-start;padding:8px 16px 8px 14px;border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.08);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);color:#fff;font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase}
+.navl{color:rgba(255,255,255,.86);text-decoration:none;font-weight:500}
+.navl:hover{color:#fff}
+.navd{color:#16325B;text-decoration:none;font-weight:500}
+.navd:hover{color:#005E9D}
+.fld{display:flex;flex-direction:column;gap:8px;font-size:13px;font-weight:600;letter-spacing:.02em;color:#16325B}
+.inp{min-height:52px;padding:0 16px;border:1px solid #C9D6E4;background:#fff;font:inherit;font-weight:400;font-size:15px;color:#16325B;width:100%;border-radius:0}
+.inp:focus{outline:2px solid #005E9D;outline-offset:-1px;border-color:#005E9D}
+.mk{position:absolute;left:-10px;top:-10px;width:20px;height:20px;border-radius:50%;background:#fff;border:5px solid #005E9D;box-shadow:0 0 0 6px rgba(255,255,255,.35);display:block}
+.ml{position:absolute;background:#fff;padding:8px 14px;box-shadow:0 6px 18px rgba(12,28,52,.18);white-space:nowrap;display:flex;flex-direction:column;line-height:1.25}
+.ml strong{font-size:14px;color:#16325B}
+.ml span{font-size:12px;color:#5B6873}
+.fimg{position:absolute;inset:0;background:linear-gradient(180deg,rgba(22,50,91,.93),rgba(12,28,52,.97)),repeating-linear-gradient(115deg,rgba(255,255,255,.05) 0 2px,transparent 2px 24px),linear-gradient(125deg,#3A6496,#0E2342)}
+.fh{color:#fff;font-weight:600;font-size:12px;letter-spacing:.18em;text-transform:uppercase;margin-bottom:6px}
+.fl{color:#B9C6D6;text-decoration:none}
+.fl:hover{color:#fff}
+.soc{width:44px;height:44px;display:flex;align-items:center;justify-content:center;border:1px solid rgba(255,255,255,.3);color:#fff;text-decoration:none}
+.soc:hover{color:#fff;background:rgba(255,255,255,.1)}
+.tag{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#9B1C6C;background:#FCE7F3;display:inline-block;padding:4px 8px;line-height:1.4}
+.no-notes .tag,.no-notes .hcap{display:none}
+@media (max-width:720px){.wrap{padding-left:16px;padding-right:16px}.wf h1{font-size:40px!important}.wf h2{font-size:30px!important}.hcap{display:none}}
+@media (max-width:640px){.fcols{grid-template-columns:1fr!important}}
+</style>
+</helmet>
+<div class="wf {{notesClass}}">
+
+<div style="position:sticky;top:0;z-index:50;height:0">
+<sc-if value="{{navTop}}" hint-placeholder-val="{{true}}">
+<header style="position: absolute; top: 0; left: 0; right: 0; border-bottom: 1px solid rgba(255,255,255,.14); border-style: none">
+<div class="wrap" style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px;padding-top:22px;padding-bottom:22px">
+<a href="01-inicio.html" aria-label="Impulsa Patrimonial, ir a Inicio" style="display:block;line-height:0"><img src="../../src/assets/brand/logo-horizontal-blanco.png" alt="Impulsa Patrimonial · Asesoría legal y fiscal" style="height:42px;width:auto;display:block"></a>
+<nav aria-label="Principal" style="display:flex;flex-wrap:wrap;gap:32px;font-size:14px;letter-spacing:.02em">
+<a class="navl" href="01-inicio.html">Inicio</a>
+<a class="navl" href="02-quienes-somos.html">Quiénes somos</a>
+<a class="navl" href="03-servicios.html">Servicios ▾</a>
+<a class="navl" href="05-actividad-vulnerable.html">Actividades vulnerables</a>
+<a class="navl" href="06-blog.html">Blog</a>
+</nav>
+<a class="btnw" href="08-contacto.html" aria-current="page" style="min-height:46px;padding:0 22px">Contactar <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"></path></svg></a>
+</div>
+</header>
+</sc-if>
+<sc-if value="{{navScrolled}}" hint-placeholder-val="{{false}}">
+<header style="position:absolute;top:0;left:0;right:0;background:rgba(255,255,255,.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(22,50,91,.08);box-shadow:0 8px 30px rgba(12,28,52,.08)">
+<div class="wrap" style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px;padding-top:14px;padding-bottom:14px">
+<a href="01-inicio.html" aria-label="Impulsa Patrimonial, ir a Inicio" style="display:block;line-height:0"><img src="../../src/assets/brand/logo-horizontal-color.png" alt="Impulsa Patrimonial · Asesoría legal y fiscal" style="height:38px;width:auto;display:block"></a>
+<nav aria-label="Principal" style="display:flex;flex-wrap:wrap;gap:32px;font-size:14px;letter-spacing:.02em">
+<a class="navd" href="01-inicio.html">Inicio</a>
+<a class="navd" href="02-quienes-somos.html">Quiénes somos</a>
+<a class="navd" href="03-servicios.html">Servicios ▾</a>
+<a class="navd" href="05-actividad-vulnerable.html">Actividades vulnerables</a>
+<a class="navd" href="06-blog.html">Blog</a>
+</nav>
+<a class="btn" href="08-contacto.html" aria-current="page" style="min-height:44px;padding:0 22px">Contactar <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"></path></svg></a>
+</div>
+</header>
+</sc-if>
+</div>
+
+<!-- 01 Hero interior -->
+<section style="position:relative;min-height:520px;display:flex;color:#fff;overflow:hidden">
+<img src="../../src/assets/images/hero-contacto.jpg" alt="Edificios corporativos con fachadas de cristal" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%;display:block">
+<div aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,28,52,.72) 0%,rgba(12,28,52,.35) 38%,rgba(12,28,52,.9) 100%)"></div>
+<div class="wrap" style="position:relative;z-index:2;width:100%;display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:24px;padding-top:180px;padding-bottom:64px">
+<div style="display:flex;flex-direction:column;gap:20px;max-width:820px">
+<span class="hbadge"><span style="width:6px;height:6px;background:#8FB8E0;display:block"></span>Contacto</span>
+<h1 style="font-size:56px;line-height:1.08;color:#fff">Cuéntenos sobre su empresa</h1>
+</div>
+</div>
+</section>
+
+<!-- 02 Intro filtro -->
+<section style="padding-top:80px;padding-bottom:48px">
+<div class="wrap" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(380px,1fr));gap:48px;align-items:end">
+<p style="margin:0;font-family:'Source Serif 4',Georgia,serif;font-size:26px;line-height:1.45;color:#16325B">Con esta información realizamos una primera evaluación de su caso y le contactamos.</p>
+<p style="margin:0;font-size:15px;line-height:1.8;padding-left:24px;border-left:2px solid #005E9D">Atendemos exclusivamente a empresas y personas físicas con actividad empresarial en materia de Prevención de Lavado de Dinero, Precios de Transferencia y Legal Corporativo.</p>
+</div>
+</section>
+
+<!-- 03 Formulario + canales -->
+<section style="padding-bottom:112px">
+<div class="wrap" style="display:flex;flex-wrap:wrap;gap:40px;align-items:flex-start">
+
+<div style="flex:999 1 600px;min-width:0;background:#F1F5F9;padding:48px">
+
+<sc-if value="{{sent}}" hint-placeholder-val="{{false}}">
+<div style="display:flex;flex-direction:column;gap:16px;padding:48px 0;text-align:center;align-items:center">
+<div class="tag">Estado enviado · se mide como conversión en Analytics</div>
+<span style="width:56px;height:56px;border-radius:50%;background:#16325B;color:#fff;display:flex;align-items:center;justify-content:center;font-size:24px" aria-hidden="true">✓</span>
+<h2 style="font-size:32px">Gracias, recibimos su mensaje</h2>
+<span style="max-width:420px">Revisaremos su información y le contactaremos en breve. [Tiempo estimado de respuesta]</span>
+<button type="button" onClick="{{reset}}" style="min-height:52px;padding:0 28px;border:1px solid rgba(22,50,91,.35);background:transparent;color:#16325B;font:inherit;font-weight:600;font-size:14px;cursor:pointer">Enviar otro mensaje</button>
+</div>
+</sc-if>
+<sc-if value="{{notSent}}" hint-placeholder-val="{{true}}">
+<form onSubmit="{{submit}}" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px">
+<label class="fld">Nombre completo<input class="inp" type="text" name="nombre" autocomplete="name" required=""></label>
+<label class="fld">Empresa o nombre comercial<input class="inp" type="text" name="empresa" autocomplete="organization" required=""></label>
+<label class="fld">Correo electrónico<input class="inp" type="email" name="correo" autocomplete="email" required=""></label>
+<label class="fld">Teléfono<input class="inp" type="tel" name="telefono" autocomplete="tel"></label>
+<label class="fld">Actividad o giro<input class="inp" type="text" name="giro" required=""></label>
+<label class="fld">Servicio de interés
+<select class="inp" name="servicio" required="">
+<option>Seleccione un servicio</option>
+<option>Prevención de Lavado de Dinero</option>
+<option>Precios de Transferencia</option>
+<option>Legal Corporativo</option>
+<option>Soluciones complementarias</option>
+<option>No estoy seguro</option>
+</select>
+</label>
+<label class="fld">¿Qué tan urgente es su caso?
+<select class="inp" name="urgencia" required="">
+<option>Seleccione una opción</option>
+<option>Inmediata: tengo un requerimiento o visita de la autoridad</option>
+<option>En los próximos 30 días</option>
+<option>En los próximos 3 meses</option>
+<option>Solo estoy explorando opciones</option>
+</select>
+</label>
+<label class="fld">Estado de la república
+<select class="inp" name="estado" required="">
+<option>Seleccione su estado</option>
+<option>Aguascalientes</option><option>Baja California</option><option>Baja California Sur</option><option>Campeche</option><option>Chiapas</option><option>Chihuahua</option><option>Ciudad de México</option><option>Coahuila</option><option>Colima</option><option>Durango</option><option>Estado de México</option><option>Guanajuato</option><option>Guerrero</option><option>Hidalgo</option><option>Jalisco</option><option>Michoacán</option><option>Morelos</option><option>Nayarit</option><option>Nuevo León</option><option>Oaxaca</option><option>Puebla</option><option>Querétaro</option><option>Quintana Roo</option><option>San Luis Potosí</option><option>Sinaloa</option><option>Sonora</option><option>Tabasco</option><option>Tamaulipas</option><option>Tlaxcala</option><option>Veracruz</option><option>Yucatán</option><option>Zacatecas</option>
+</select>
+</label>
+<label class="fld" style="grid-column:1 / -1">Mensaje<textarea class="inp" name="mensaje" rows="5" placeholder="Cuéntenos su situación: ¿recibió un requerimiento de la autoridad?, ¿tiene una fecha límite?, ¿ya cuenta con manual o avisos presentados?" style="padding:14px 16px;min-height:150px;resize:vertical;line-height:1.6"></textarea></label>
+<label style="grid-column:1 / -1;display:flex;gap:12px;align-items:flex-start;font-size:14px"><input type="checkbox" required="" style="width:20px;height:20px;margin-top:2px;flex-shrink:0;accent-color:#16325B"><span>He leído y acepto el <a href="09-legales.html">Aviso de privacidad</a>.</span></label>
+<div style="grid-column:1 / -1;font-size:13px;color:#5B6873;border-top:1px solid #DDE4EC;padding-top:16px">El envío de este formulario no crea una relación abogado-cliente.</div>
+<div style="grid-column:1 / -1"><button type="submit" style="min-height:56px;padding:0 36px;background:#16325B;color:#fff;border:1px solid #16325B;font:inherit;font-weight:600;font-size:14px;letter-spacing:.04em;cursor:pointer">Enviar mensaje</button></div>
+</form>
+</sc-if>
+</div>
+
+<aside style="flex:1 1 320px;display:flex;flex-direction:column;gap:16px">
+<a href="https://wa.me/523339079868" style="display:flex;flex-direction:column;gap:10px;padding:32px;background:#16325B;color:#D5DEE9;text-decoration:none">
+<span class="lbl" style="color:#8FB8E0">WhatsApp</span>
+<span style="font-family:'Source Serif 4',Georgia,serif;font-size:24px;line-height:1.3;color:#fff">Escríbanos por WhatsApp</span>
+<span style="font-size:15px">+52 33 3907 9868 · con un mensaje inicial predefinido.</span>
+<span style="font-weight:600;font-size:14px;color:#fff;margin-top:4px">Iniciar conversación →</span>
+</a>
+<div style="border:1px solid #DDE4EC;padding:32px;display:flex;flex-direction:column;gap:10px">
+<span class="lbl">Atención nacional en línea</span>
+<span style="font-size:15px">Atendemos a empresas de todo México por videollamada, teléfono y correo.</span>
+<a href="mailto:contacto@impulsapatrimonial.com" style="font-weight:600;font-size:15px;text-decoration:none;overflow-wrap:anywhere">contacto@impulsapatrimonial.com</a>
+<a href="tel:+523339079868" style="font-weight:600;font-size:15px;text-decoration:none">+52 33 3907 9868</a>
+</div>
+<a class="lnk" href="#cobertura" style="justify-content:space-between;min-height:52px;padding:0 4px;border-bottom:1px solid #16325B;color:#16325B">Ver oficinas y cobertura <span aria-hidden="true">↓</span></a>
+<div class="tag" style="align-self:flex-start">Fuera de alcance: agenda, selección de abogado, reservación de horarios y cobros</div>
+</aside>
+
+</div>
+</section>
+
+<!-- 04 Cobertura -->
+<section id="cobertura" style="background:#F1F5F9;padding-top:112px;padding-bottom:112px">
+<div class="wrap">
+
+<div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:28px;margin-bottom:56px">
+<div style="display:flex;flex-direction:column;gap:18px;max-width:640px">
+<span class="eb">Cobertura</span>
+<h2 style="font-size:44px;line-height:1.15">Atención en todo México, oficinas en el centro del país</h2>
+</div>
+<div style="display:flex;flex-direction:column;gap:10px;font-size:14px">
+<span style="display:flex;align-items:center;gap:12px"><span style="width:16px;height:16px;border-radius:50%;background:#fff;border:4px solid #005E9D;display:block"></span>Oficina · reuniones presenciales bajo cita</span>
+<span style="display:flex;align-items:center;gap:12px"><span style="width:16px;height:16px;background:#3F5878;display:block"></span>Atención en línea en todo el país</span>
+</div>
+</div>
+
+<div style="position:relative;max-width:940px;margin:0 auto">
+<img src="../../src/assets/images/mapa-mexico.webp" alt="Mapa de México con oficinas en Ciudad de México, Guadalajara, Morelia y Querétaro" style="display:block;width:100%;height:auto">
+
+<div style="position:absolute;left:43%;top:67.4%;width:0;height:0">
+<span class="mk"></span>
+<span style="position:absolute;right:12px;top:0;width:94px;height:1px;background:#fff;display:block"></span>
+<span class="ml" style="right:106px;top:-22px"><strong>Guadalajara</strong><span>Bajo cita</span></span>
+</div>
+<div style="position:absolute;left:51.2%;top:73.6%;width:0;height:0">
+<span class="mk"></span>
+<span style="position:absolute;left:0;top:12px;width:1px;height:76px;background:#fff;display:block"></span>
+<span class="ml" style="left:-46px;top:88px"><strong>Morelia</strong><span>Bajo cita</span></span>
+</div>
+<div style="position:absolute;left:54.1%;top:69.7%;width:0;height:0">
+<span class="mk"></span>
+<span style="position:absolute;left:0;bottom:12px;width:1px;height:94px;background:#fff;display:block"></span>
+<span class="ml" style="left:-50px;bottom:106px"><strong>Querétaro</strong><span>Bajo cita</span></span>
+</div>
+<div style="position:absolute;left:57.6%;top:75.9%;width:0;height:0">
+<span class="mk"></span>
+<span style="position:absolute;left:12px;top:0;width:108px;height:1px;background:#fff;display:block"></span>
+<span class="ml" style="left:120px;top:-22px"><strong>Ciudad de México</strong><span>Bajo cita</span></span>
+</div>
+</div>
+
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:32px;margin-top:72px">
+<div style="display:flex;flex-direction:column;gap:10px"><span style="width:56px;height:2px;background:#005E9D;display:block"></span><strong style="font-family:'Source Serif 4',Georgia,serif;font-weight:500;font-size:21px;color:#16325B">Ciudad de México</strong><span style="font-size:14px">Reuniones presenciales bajo cita. Atención a empresas del centro del país.</span></div>
+<div style="display:flex;flex-direction:column;gap:10px"><span style="width:56px;height:2px;background:#005E9D;display:block"></span><strong style="font-family:'Source Serif 4',Georgia,serif;font-weight:500;font-size:21px;color:#16325B">Guadalajara</strong><span style="font-size:14px">Reuniones presenciales bajo cita. Atención a empresas del occidente.</span></div>
+<div style="display:flex;flex-direction:column;gap:10px"><span style="width:56px;height:2px;background:#005E9D;display:block"></span><strong style="font-family:'Source Serif 4',Georgia,serif;font-weight:500;font-size:21px;color:#16325B">Morelia</strong><span style="font-size:14px">Reuniones presenciales bajo cita. Atención a empresas del Bajío.</span></div>
+<div style="display:flex;flex-direction:column;gap:10px"><span style="width:56px;height:2px;background:#005E9D;display:block"></span><strong style="font-family:'Source Serif 4',Georgia,serif;font-weight:500;font-size:21px;color:#16325B">Querétaro</strong><span style="font-size:14px">Reuniones presenciales bajo cita. Atención a empresas del Bajío.</span></div>
+<div style="display:flex;flex-direction:column;gap:10px;background:#16325B;color:#D5DEE9;padding:24px"><strong style="font-family:'Source Serif 4',Georgia,serif;font-weight:500;font-size:21px;color:#fff">Todo México</strong><span style="font-size:14px">Atención en línea por videollamada, teléfono y correo, sin importar dónde esté su empresa.</span></div>
+</div>
+</div>
+</section>
+
+<footer style="position:relative;overflow:hidden;background:#0E2342;color:#B9C6D6;font-size:14px">
+<div class="fimg" aria-hidden="true"></div>
+<div class="wrap" style="position:relative;z-index:1;padding-top:104px;padding-bottom:40px">
+<div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:64px">
+<div style="flex:1 1 340px;max-width:440px;display:flex;flex-direction:column;gap:30px;align-items:flex-start">
+<img src="../../src/assets/brand/logo-horizontal-blanco.png" alt="Impulsa Patrimonial · Asesoría legal y fiscal" style="height:60px;width:auto;display:block">
+<p style="margin:0;font-family:'Source Serif 4',Georgia,serif;font-size:30px;line-height:1.3;color:#fff">Impulsamos el crecimiento de las empresas con seguridad jurídica y patrimonial.</p>
+<a class="btno" href="08-contacto.html">Agendar asesoría <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"></path></svg></a>
+</div>
+<div class="fcols" style="flex:1 1 520px;max-width:600px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:48px 56px">
+<div style="display:flex;flex-direction:column;gap:44px">
+<div style="display:flex;flex-direction:column;gap:12px"><span class="fh">Sitio</span><a class="fl" href="01-inicio.html">Inicio</a><a class="fl" href="02-quienes-somos.html">Quiénes somos</a><a class="fl" href="03-servicios.html">Servicios</a><a class="fl" href="05-actividad-vulnerable.html">Actividades vulnerables</a><a class="fl" href="06-blog.html">Blog</a><a class="fl" href="08-contacto.html">Contacto</a></div>
+<div style="display:flex;flex-direction:column;gap:12px"><span class="fh">Servicios</span><a class="fl" href="04-servicio-pld.html">Prevención de Lavado de Dinero</a><a class="fl" href="04-servicio-pld.html">Precios de Transferencia</a><a class="fl" href="04-servicio-pld.html">Legal Corporativo</a><a class="fl" href="03-servicios.html">Complementarios</a></div>
+</div>
+<div style="display:flex;flex-direction:column;gap:44px">
+<div style="display:flex;flex-direction:column;gap:12px"><span class="fh">Oficinas</span><span>Ciudad de México</span><span>Guadalajara</span><span>Morelia</span><span>Querétaro</span><span style="color:#fff;margin-top:6px;padding-top:12px;border-top:1px solid rgba(255,255,255,.18)">Atención en línea en todo México</span></div>
+<div style="display:flex;flex-direction:column;gap:12px"><span class="fh">Contacto</span><a class="fl" href="https://wa.me/523339079868">+52 33 3907 9868</a><a class="fl" href="mailto:contacto@impulsapatrimonial.com" style="overflow-wrap:anywhere">contacto@impulsapatrimonial.com</a>
+<div style="display:flex;gap:10px;margin-top:8px">
+<a class="soc" href="https://www.instagram.com/" aria-label="Instagram de Impulsa Patrimonial"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="0.8"></circle></svg></a>
+<a class="soc" href="https://www.linkedin.com/" aria-label="LinkedIn de Impulsa Patrimonial"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M8 10v7M8 7v.01M12 17v-7M12 13a3 3 0 0 1 6 0v4"></path></svg></a>
+<a class="soc" href="https://wa.me/523339079868" aria-label="WhatsApp de Impulsa Patrimonial"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"></path><path d="M9 9.5c.3 1.8 1.7 3.4 3.5 4l1.2-1.2 2 1-.4 1.6c-3.6.3-7.2-3.1-7.1-6.6L9.8 8l1 2z"></path></svg></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div style="border-top:1px solid rgba(255,255,255,.16);margin-top:80px;padding-top:24px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;font-size:13px">
+<span>© 2026 Impulsa Patrimonial · Diseñado por <a href="https://docabyte.com" style="color:#fff;font-weight:600;text-decoration:none">Docabyte</a></span>
+<span style="display:flex;flex-wrap:wrap;gap:24px"><a class="fl" href="09-legales.html">Aviso de privacidad</a><a class="fl" href="09-legales.html">Términos de uso</a><a class="fl" href="09-legales.html">Política de cookies</a><a class="fl" href="09-legales.html">Descargo de responsabilidad</a></span>
+</div>
+</div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"anotaciones":{"editor":"boolean","default":true},"$preview":{"width":1440,"height":3900}}'>
+class Component extends DCLogic {
+constructor(props) {
+super(props);
+this.state = { scrolled: false, sent: false };
+}
+componentDidMount() {
+this._onScroll = () => {
+const y = window.pageYOffset || (document.documentElement && document.documentElement.scrollTop) || 0;
+const s = y > 48;
+if (s !== this.state.scrolled) this.setState({ scrolled: s });
+};
+window.addEventListener('scroll', this._onScroll, { passive: true });
+this._onScroll();
+}
+componentWillUnmount() {
+window.removeEventListener('scroll', this._onScroll);
+}
+renderVals() {
+const show = this.props.anotaciones ?? true;
+return {
+notesClass: show ? '' : 'no-notes',
+navTop: !this.state.scrolled,
+navScrolled: this.state.scrolled,
+sent: this.state.sent,
+notSent: !this.state.sent,
+submit: (e) => { if (e && e.preventDefault) e.preventDefault(); this.setState({ sent: true }); },
+reset: () => this.setState({ sent: false })
+};
+}
+}
+</script>
+</body>
+</html>

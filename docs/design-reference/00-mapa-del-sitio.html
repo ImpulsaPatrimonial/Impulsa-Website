@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Mapa del sitio — Impulsa Patrimonial</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#fff}
+a{color:#1C1C1C}a:hover{color:#000}
+.wf *{box-sizing:border-box}
+.node{display:block;border:2px solid #1C1C1C;background:#fff;padding:14px 16px;font-weight:600;font-size:16px;text-decoration:none;text-align:center}
+.sub{display:block;border:1px solid #9A9A95;background:#fff;padding:10px 12px;font-size:14px;text-decoration:none;text-align:center}
+.vl{width:2px;height:28px;background:#1C1C1C;margin:0 auto}
+.mono{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:#555}
+</style>
+</helmet>
+<div class="wf" style="width:1440px;height:900px;padding:56px 64px;font-family:'IBM Plex Sans',system-ui,sans-serif;color:#1C1C1C;background:#F6F6F4;display:flex;flex-direction:column;gap:0">
+
+<div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:28px">
+<div style="font-size:28px;font-weight:700">Arquitectura del sitio — versión lanzable</div>
+<div class="mono">Haz clic en un nodo para abrir su wireframe</div>
+</div>
+
+<div style="display:flex;justify-content:center"><a class="node" href="01-inicio.html" style="width:240px;background:#1C1C1C;color:#fff">Inicio</a></div>
+<div class="vl"></div>
+<div style="height:2px;background:#1C1C1C;margin:0 120px"></div>
+
+<div style="display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:24px">
+<div style="display:flex;flex-direction:column;gap:10px">
+<div class="vl"></div>
+<a class="node" href="02-quienes-somos.html">Quiénes somos</a>
+<span class="sub" style="color:#444">Trayectoria desde 2012</span>
+<span class="sub" style="color:#444">Especialización y metodología</span>
+<span class="sub" style="color:#444">Sectores y credenciales</span>
+<span class="sub" style="color:#444">Membresías y certificaciones</span>
+</div>
+<div style="display:flex;flex-direction:column;gap:10px">
+<div class="vl"></div>
+<a class="node" href="03-servicios.html">Servicios</a>
+<a class="sub" href="04-servicio-pld.html" style="border:2px solid #1C1C1C;font-weight:600">Prevención de Lavado de Dinero ★</a>
+<a class="sub" href="04-servicio-pld.html" style="border:2px solid #1C1C1C;font-weight:600">Precios de Transferencia ★</a>
+<a class="sub" href="04-servicio-pld.html">Legal Corporativo</a>
+<span class="sub" style="border-style:dashed;color:#555">Complementarios (agrupados, sin página propia)</span>
+</div>
+<div style="display:flex;flex-direction:column;gap:10px">
+<div class="vl"></div>
+<a class="node" href="05-actividad-vulnerable.html">Actividades vulnerables</a>
+<a class="sub" href="05-actividad-vulnerable.html">[Actividad 1]</a>
+<a class="sub" href="05-actividad-vulnerable.html">[Actividad 2]</a>
+<span class="sub" style="border-style:dashed;color:#555">+ Páginas nuevas creadas desde el admin (plantilla duplicable)</span>
+</div>
+<div style="display:flex;flex-direction:column;gap:10px">
+<div class="vl"></div>
+<a class="node" href="06-blog.html">Blog</a>
+<a class="sub" href="07-blog-articulo.html">Artículo individual</a>
+<span class="sub" style="color:#444">Categorías y etiquetas</span>
+<span class="sub" style="color:#444">Buscador</span>
+<span class="sub" style="color:#444">2 artículos iniciales</span>
+</div>
+<div style="display:flex;flex-direction:column;gap:10px">
+<div class="vl"></div>
+<a class="node" href="08-contacto.html">Contacto</a>
+<span class="sub" style="color:#444">Formulario (7 campos)</span>
+<span class="sub" style="color:#444">WhatsApp Business</span>
+<span class="sub" style="color:#444">Atención nacional / reuniones bajo cita</span>
+</div>
+</div>
+
+<div style="margin-top:auto;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px">
+<div style="border-top:2px solid #1C1C1C;padding-top:16px;display:flex;flex-direction:column;gap:10px">
+<span class="mono">Footer · páginas legales</span>
+<div style="display:flex;flex-wrap:wrap;gap:10px">
+<a class="sub" href="09-legales.html">Aviso de privacidad</a>
+<a class="sub" href="09-legales.html">Términos de uso</a>
+<a class="sub" href="09-legales.html">Política de cookies</a>
+<a class="sub" href="09-legales.html">Descargo de responsabilidad</a>
+<a class="sub" href="09-legales.html">Banner de cookies</a>
+</div>
+</div>
+<div style="border-top:2px solid #1C1C1C;padding-top:16px;display:flex;flex-direction:column;gap:10px">
+<span class="mono">Administrador (fuera del sitio público)</span>
+<div style="display:flex;flex-wrap:wrap;gap:10px">
+<span class="sub" style="background:#EAF0FF;border-color:#1F4FD1;color:#1F4FD1">Panel del blog</span>
+<span class="sub" style="background:#EAF0FF;border-color:#1F4FD1;color:#1F4FD1">Roles: 1 administrador + 1 editor</span>
+<span class="sub" style="background:#EAF0FF;border-color:#1F4FD1;color:#1F4FD1">Constructor de actividades vulnerables</span>
+</div>
+</div>
+</div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":900}}'>
+class Component extends DCLogic {
+renderVals() {
+return {};
+}
+}
+</script>
+</body>
+</html>

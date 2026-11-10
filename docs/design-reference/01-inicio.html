@@ -1,0 +1,483 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Inicio — Impulsa Patrimonial</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&amp;family=Montserrat:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#fff}
+a{color:#005E9D}a:hover{color:#16325B}
+.wf{font-family:'Montserrat',system-ui,sans-serif;color:#3A4552;background:#fff;font-size:16px;line-height:1.7}
+.wf *{box-sizing:border-box}
+.wf h1,.wf h2,.wf h3{font-family:'Source Serif 4',Georgia,serif;font-weight:400;color:#16325B;margin:0;letter-spacing:-.01em}
+.wrap{max-width:1200px;margin:0 auto;padding-left:32px;padding-right:32px}
+.eb{display:inline-flex;align-items:center;gap:14px;font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#005E9D}
+.eb::before{content:"";width:32px;height:1px;background:currentColor;display:block}
+.lbl{font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#005E9D}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 28px;background:#16325B;color:#fff;text-decoration:none;font-weight:600;font-size:14px;letter-spacing:.04em;border:1px solid #16325B}
+.btn:hover{color:#fff;background:#005E9D;border-color:#005E9D}
+.btn2{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 28px;background:transparent;color:#16325B;text-decoration:none;font-weight:600;font-size:14px;letter-spacing:.04em;border:1px solid rgba(22,50,91,.35)}
+.btn2:hover{color:#16325B;border-color:#16325B}
+.btnw{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 28px;background:#fff;color:#16325B;text-decoration:none;font-weight:600;font-size:14px;letter-spacing:.04em;border:1px solid #fff}
+.btnw:hover{color:#16325B;background:#E8EEF5}
+.btno{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 28px;background:rgba(255,255,255,.06);color:#fff;text-decoration:none;font-weight:600;font-size:14px;letter-spacing:.04em;border:1px solid rgba(255,255,255,.55)}
+.btno:hover{color:#fff;background:rgba(255,255,255,.14)}
+.lnk{display:inline-flex;align-items:center;gap:8px;color:#005E9D;font-weight:600;font-size:14px;letter-spacing:.03em;text-decoration:none}
+.lnk:hover{color:#16325B}
+.ph{position:relative;overflow:hidden;background:linear-gradient(140deg,#2C5283 0%,#16325B 55%,#0E2342 100%)}
+.ph::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(115deg,rgba(255,255,255,.035) 0 2px,transparent 2px 22px)}
+.phc{position:absolute;left:16px;right:16px;bottom:14px;font-family:'IBM Plex Mono',monospace;font-size:11px;line-height:1.45;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.75)}
+.hero-img{position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,28,52,.72) 0%,rgba(12,28,52,.22) 38%,rgba(12,28,52,.9) 100%),repeating-linear-gradient(115deg,rgba(255,255,255,.03) 0 2px,transparent 2px 26px),linear-gradient(125deg,#3A6496 0%,#1D4070 45%,#0E2342 100%)}
+.hvid{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%;display:block}
+.hov{position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,28,52,.78) 0%,rgba(12,28,52,.38) 36%,rgba(12,28,52,.55) 62%,rgba(12,28,52,.94) 100%),linear-gradient(90deg,rgba(14,35,66,.55) 0%,rgba(14,35,66,.15) 60%,rgba(14,35,66,.35) 100%)}
+.hcap{position:absolute;right:32px;top:116px;z-index:2;max-width:320px;text-align:right;font-family:'IBM Plex Mono',monospace;font-size:11px;line-height:1.5;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.62)}
+.hbadge{display:inline-flex;align-items:center;gap:10px;align-self:flex-start;padding:8px 16px 8px 14px;border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.08);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);color:#fff;font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase}
+.navl{color:rgba(255,255,255,.86);text-decoration:none;font-weight:500}
+.navl:hover{color:#fff}
+.navon{color:#fff;text-decoration:none;font-weight:600;box-shadow:inset 0 -1px 0 #fff;padding-bottom:4px}
+.navon:hover{color:#fff}
+.navd{color:#16325B;text-decoration:none;font-weight:500}
+.navd:hover{color:#005E9D}
+.navdon{color:#005E9D;text-decoration:none;font-weight:600;box-shadow:inset 0 -1px 0 #005E9D;padding-bottom:4px}
+.navdon:hover{color:#005E9D}
+.pill{display:inline-flex;align-items:center;min-height:44px;padding:0 18px;border:1px solid #C9D6E4;background:#fff;color:#16325B;font-size:14px;font-weight:500;text-decoration:none}
+.pill:hover{border-color:#005E9D;color:#005E9D}
+.fimg{position:absolute;inset:0;background:linear-gradient(180deg,rgba(22,50,91,.93),rgba(12,28,52,.97)),repeating-linear-gradient(115deg,rgba(255,255,255,.05) 0 2px,transparent 2px 24px),linear-gradient(125deg,#3A6496,#0E2342)}
+.fh{color:#fff;font-weight:600;font-size:12px;letter-spacing:.18em;text-transform:uppercase;margin-bottom:6px}
+.fl{color:#B9C6D6;text-decoration:none}
+.fl:hover{color:#fff}
+.soc{width:44px;height:44px;display:flex;align-items:center;justify-content:center;border:1px solid rgba(255,255,255,.3);color:#fff;text-decoration:none}
+.soc:hover{color:#fff;background:rgba(255,255,255,.1)}
+.tag{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#9B1C6C;background:#FCE7F3;display:inline-block;padding:4px 8px;line-height:1.4}
+.no-notes .tag,.no-notes .phc,.no-notes .hcap{display:none}
+.cov{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.slide{position:absolute;inset:0;opacity:0;transition:opacity 1.1s ease}
+.slide.on{opacity:1}
+.s1{background:linear-gradient(140deg,#2C5283 0%,#16325B 55%,#0E2342 100%)}
+.s2{background:linear-gradient(200deg,#35608F 0%,#1A3A66 50%,#0E2342 100%)}
+.s3{background:linear-gradient(110deg,#264A78 0%,#16325B 60%,#102849 100%)}
+.s4{background:linear-gradient(170deg,#3A6496 0%,#1D4070 48%,#0E2342 100%)}
+.s5{background:linear-gradient(80deg,#2A5085 0%,#16325B 52%,#0C1F3B 100%)}
+.dot{width:30px;height:44px;padding:0;border:0;background:transparent;cursor:pointer;display:flex;align-items:center}
+.dot span{display:block;width:100%;height:2px;background:rgba(255,255,255,.4)}
+.dot.on span{background:#fff}
+.mq{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)}
+.mq-track{display:flex;align-items:center;gap:56px;width:max-content;animation:mq 80s linear infinite}
+.mq:hover .mq-track{animation-play-state:paused}
+@keyframes mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.mq-i{font-family:'Source Serif 4',Georgia,serif;font-size:64px;line-height:1.1;color:#16325B;white-space:nowrap}
+.mq-s{width:30px;height:auto;display:block}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.metw{position:relative}
+.meth{position:absolute;top:0;left:0;width:calc(50% - 10px);display:flex;flex-direction:column;gap:18px;z-index:1}
+.met{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;align-items:end;min-height:520px}
+.mc{display:flex;flex-direction:column;justify-content:space-between;gap:20px;padding:32px;overflow:hidden;height:150px;transition:height 1.1s cubic-bezier(.22,1,.36,1)}
+.mcx{display:flex;flex-direction:column;gap:10px;opacity:0;transform:translateY(14px);transition:opacity .6s ease .5s,transform .6s ease .5s}
+.met .mc:nth-child(2){transition-delay:.25s}.met .mc:nth-child(2) .mcx{transition-delay:.75s}
+.met .mc:nth-child(3){transition-delay:.5s}.met .mc:nth-child(3) .mcx{transition-delay:1s}
+.met .mc:nth-child(4){transition-delay:.75s}.met .mc:nth-child(4) .mcx{transition-delay:1.25s}
+.met.in .mc:nth-child(1){height:270px}
+.met.in .mc:nth-child(2){height:320px}
+.met.in .mc:nth-child(3){height:420px}
+.met.in .mc:nth-child(4){height:520px}
+.met.in .mcx{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.mq-track{animation:none}.mc,.mcx,.slide{transition:none}}
+@media (max-width:900px){.meth{position:static;width:auto;margin-bottom:40px}.met{grid-template-columns:1fr}.met{min-height:0}.met .mc,.met.in .mc{height:auto!important;min-height:220px}.mcx{opacity:1;transform:none}.mq-i{font-size:40px}}
+@media (max-width:720px){.wrap{padding-left:16px;padding-right:16px}.wf h1{font-size:40px!important}.wf h2{font-size:30px!important}.hcap{display:none}}
+@media (max-width:640px){.fcols{grid-template-columns:1fr!important}}
+</style>
+</helmet>
+<div class="wf {{notesClass}}">
+
+<!-- Navbar: transparente sobre el hero; blanco translúcido al hacer scroll -->
+<div style="position:sticky;top:0;z-index:50;height:0">
+<sc-if value="{{navTop}}" hint-placeholder-val="{{true}}">
+<header style="position: absolute; top: 0; left: 0; right: 0; border-bottom: 1px solid rgba(255,255,255,.14); border-style: none">
+<div class="wrap" style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px;padding-top:22px;padding-bottom:22px">
+<a href="01-inicio.html" aria-label="Impulsa Patrimonial, ir a Inicio" style="display:block;line-height:0"><img src="../../src/assets/brand/logo-horizontal-blanco.png" alt="Impulsa Patrimonial · Asesoría legal y fiscal" style="height:42px;width:auto;display:block"></a>
+<nav aria-label="Principal" style="display:flex;flex-wrap:wrap;gap:32px;font-size:14px;letter-spacing:.02em">
+<a class="navon" href="01-inicio.html">Inicio</a>
+<a class="navl" href="02-quienes-somos.html">Quiénes somos</a>
+<a class="navl" href="03-servicios.html">Servicios ▾</a>
+<a class="navl" href="05-actividad-vulnerable.html">Actividades vulnerables</a>
+<a class="navl" href="06-blog.html">Blog</a>
+</nav>
+<a class="btnw" href="08-contacto.html" style="min-height:46px;padding:0 22px">Contactar <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"></path></svg></a>
+</div>
+</header>
+</sc-if>
+<sc-if value="{{navScrolled}}" hint-placeholder-val="{{false}}">
+<header style="position:absolute;top:0;left:0;right:0;background:rgba(255,255,255,.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(22,50,91,.08);box-shadow:0 8px 30px rgba(12,28,52,.08)">
+<div class="wrap" style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px;padding-top:14px;padding-bottom:14px">
+<a href="01-inicio.html" aria-label="Impulsa Patrimonial, ir a Inicio" style="display:block;line-height:0"><img src="../../src/assets/brand/logo-horizontal-color.png" alt="Impulsa Patrimonial · Asesoría legal y fiscal" style="height:38px;width:auto;display:block"></a>
+<nav aria-label="Principal" style="display:flex;flex-wrap:wrap;gap:32px;font-size:14px;letter-spacing:.02em">
+<a class="navdon" href="01-inicio.html">Inicio</a>
+<a class="navd" href="02-quienes-somos.html">Quiénes somos</a>
+<a class="navd" href="03-servicios.html">Servicios ▾</a>
+<a class="navd" href="05-actividad-vulnerable.html">Actividades vulnerables</a>
+<a class="navd" href="06-blog.html">Blog</a>
+</nav>
+<a class="btn" href="08-contacto.html" style="min-height:44px;padding:0 22px">Contactar <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"></path></svg></a>
+</div>
+</header>
+</sc-if>
+</div>
+
+<!-- 01 Hero -->
+<section style="position:relative;min-height:820px;display:flex;color:#fff;overflow:hidden">
+<video class="hvid" data-hero-video="1" src="../../src/assets/video/hero-inicio.mp4" poster="../../src/assets/video/hero-inicio-poster.jpg" autoplay="" muted="" loop="" playsinline="" preload="auto" aria-hidden="true"></video>
+<div class="hov" aria-hidden="true"></div>
+
+<div class="wrap" style="position:relative;z-index:2;width:100%;display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:48px;padding-top:200px;padding-bottom:96px">
+<div style="flex:1 1 560px;max-width:740px;display:flex;flex-direction:column;gap:24px">
+
+<span style="display:flex;align-items:center;gap:14px;font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.88)"><span style="width:40px;height:1px;background:rgba(255,255,255,.75);display:block"></span>Asesoría legal y fiscal desde 2012</span>
+<h1 style="font-size:64px;line-height:1.06;color:#fff">Cumplimiento con certeza jurídica y patrimonial</h1>
+<p style="margin:0;font-size:18px;line-height:1.7;color:rgba(255,255,255,.86);max-width:560px">Prevención de Lavado de Dinero, Precios de Transferencia y Legal Corporativo para empresas y personas físicas con actividad empresarial en todo México.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:18px;align-items:stretch;min-width:300px">
+<div style="display:flex;align-items:center;gap:18px;padding:18px 22px;border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.08);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)">
+<span style="font-family:'Source Serif 4',Georgia,serif;font-size:48px;line-height:1;color:#fff">14</span>
+<span style="font-size:13px;line-height:1.5;color:rgba(255,255,255,.88)">años acompañando a empresas<br>en México y el extranjero</span>
+</div>
+<a class="btnw" href="08-contacto.html" style="min-height:56px">Solicitar asesoría <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"></path></svg></a>
+</div>
+</div>
+</section>
+
+<!-- 02 Franja de confianza -->
+<section style="border-bottom: 1px solid #DDE4EC; border-style: none">
+<div class="wrap" style="padding-top:44px;padding-bottom:44px;display:flex;flex-wrap:wrap;gap:32px">
+<div style="flex:1 1 220px;display:flex;flex-direction:column;gap:4px;border-left:1px solid #DDE4EC;padding-left:24px"><span style="font-family:'Source Serif 4',Georgia,serif;font-size:40px;line-height:1.1;color:#16325B">2012</span><span style="font-size:14px;color:#5B6873">Año de fundación de la firma</span></div>
+<div style="flex:1 1 220px;display:flex;flex-direction:column;gap:4px;border-left:1px solid #DDE4EC;padding-left:24px"><span style="font-family:'Source Serif 4',Georgia,serif;font-size:40px;line-height:1.1;color:#16325B">15</span><span style="font-size:14px;color:#5B6873">Sectores de la economía atendidos</span></div>
+<div style="flex:1.7 1 400px;display:flex;flex-direction:column;gap:4px;border-left:1px solid #DDE4EC;padding-left:24px"><span style="font-family:'Source Serif 4',Georgia,serif;font-size:40px;line-height:1.1;color:#16325B;white-space:nowrap">IMCP · COPARMEX</span><span style="font-size:14px;color:#5B6873">Participación institucional en PLD</span></div>
+</div>
+</section>
+
+<!-- 03 La firma -->
+<section style="padding-top:120px;padding-bottom:120px">
+<div class="wrap" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(360px,1fr));gap:88px;align-items:center">
+<div style="position:relative;padding:0 28px 28px 0">
+<div aria-hidden="true" style="position:absolute;top:28px;left:28px;right:0;bottom:0;background:#F1F5F9;border:1px solid #C9DAEB"></div>
+<div class="ph" style="position:relative;height:560px"><img class="cov" src="../../src/assets/images/inicio-la-firma.jpg" alt="Equipo de la firma en una reunión de trabajo" style="object-position:45% center"></div>
+</div>
+<div style="display:flex;flex-direction:column;gap:26px;max-width:520px">
+<span class="eb">La firma</span>
+<h2 style="font-size:44px;line-height:1.15">Cumplir no es un trámite: es la base para crecer con seguridad</h2>
+
+<p style="margin:0;font-size:18px;line-height:1.85">Somos una firma mexicana de contadores públicos y abogados fundada en 2012. Acompañamos a empresas y personas físicas con actividad empresarial en el diagnóstico, la implementación y la defensa de sus obligaciones legales, fiscales y regulatorias, con cobertura en toda la República Mexicana.</p>
+<a class="lnk" href="02-quienes-somos.html" style="align-self:flex-start;padding-bottom:6px;border-bottom:1px solid #005E9D">Conozca la firma <span aria-hidden="true">→</span></a>
+</div>
+</div>
+</section>
+
+<!-- 04 Áreas de especialización -->
+<section style="background:#F1F5F9;padding-top:112px;padding-bottom:112px">
+<div class="wrap">
+
+<div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:48px">
+<div style="display:flex;flex-direction:column;gap:18px;max-width:680px"><span class="eb">Áreas de especialización</span><h2 style="font-size:44px;line-height:1.15">Tres prácticas, un mismo objetivo: proteger su patrimonio</h2></div>
+<a class="lnk" href="03-servicios.html">Ver todos los servicios <span aria-hidden="true">→</span></a>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(360px,1fr));gap:28px">
+<a href="04-servicio-pld.html" style="display:flex;flex-direction:column;background:#fff;text-decoration:none;color:#3A4552;border:1px solid #DDE4EC">
+<span class="ph" style="height:260px;display:block"><img class="cov" src="../../src/assets/images/servicio-pld.jpg" alt="Abogado trabajando junto a una estatuilla de la justicia" style="object-position:center 40%"></span>
+<span style="display:flex;flex-direction:column;gap:14px;padding:36px">
+<span class="lbl">01 · Práctica principal</span>
+<span style="font-family:'Source Serif 4',Georgia,serif;font-size:32px;line-height:1.15;color:#16325B">Prevención de Lavado de Dinero</span>
+<span style="font-size:15px;line-height:1.75">Diagnóstico, implementación y defensa para personas físicas y morales que realizan actividades vulnerables, conforme a la reforma 2025 y las Reglas de Carácter General 2026.</span>
+<span class="lnk" style="margin-top:6px">Conocer el servicio <span aria-hidden="true">→</span></span>
+</span>
+</a>
+<a href="04-servicio-pld.html" style="display:flex;flex-direction:column;background:#fff;text-decoration:none;color:#3A4552;border:1px solid #DDE4EC">
+<span class="ph" style="height:260px;display:block"><img class="cov" src="../../src/assets/images/servicio-precios-transferencia.jpg" alt="Reportes financieros, libreta y calculadora sobre un escritorio" style="object-position:center 65%"></span>
+<span style="display:flex;flex-direction:column;gap:14px;padding:36px">
+<span class="lbl">02 · Práctica principal</span>
+<span style="font-family:'Source Serif 4',Georgia,serif;font-size:32px;line-height:1.15;color:#16325B">Precios de Transferencia</span>
+<span style="font-size:15px;line-height:1.75">Identificación, documentación y defensa de operaciones con partes relacionadas en México y el extranjero, conforme a la Ley del ISR y las Directrices de la OCDE.</span>
+<span class="lnk" style="margin-top:6px">Conocer el servicio <span aria-hidden="true">→</span></span>
+</span>
+</a>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(360px,1fr));gap:28px;margin-top:28px">
+<a href="04-servicio-pld.html" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));background:#fff;text-decoration:none;color:#3A4552;border:1px solid #DDE4EC">
+<span class="ph" style="min-height:220px;display:block"><img class="cov" src="../../src/assets/images/servicio-legal-corporativo.jpg" alt="Sala de consejo con vista a la ciudad" style="object-position:60% center"></span>
+<span style="display:flex;flex-direction:column;gap:12px;padding:32px">
+<span class="lbl">03</span>
+<span style="font-family:'Source Serif 4',Georgia,serif;font-size:26px;line-height:1.2;color:#16325B">Legal Corporativo</span>
+<span style="font-size:15px;line-height:1.7">Constitución, operación y reorganización de su empresa en México.</span>
+<span class="lnk">Conocer el servicio <span aria-hidden="true">→</span></span>
+</span>
+</a>
+<a href="03-servicios.html" style="display:flex;flex-direction:column;justify-content:space-between;gap:20px;background:#16325B;color:#D5DEE9;text-decoration:none;padding:36px">
+<span style="display:flex;flex-direction:column;gap:12px">
+<span class="lbl" style="color:#8FB8E0">Soluciones complementarias</span>
+<span style="font-family:'Source Serif 4',Georgia,serif;font-size:26px;line-height:1.25;color:#fff">Una atención integral para su empresa</span>
+<span style="font-size:15px;line-height:1.9">Soluciones fiscales · Litigio fiscal y defensa · Soluciones contables · Auditoría</span>
+</span>
+<span class="lnk" style="color:#fff">Ver servicios complementarios <span aria-hidden="true">→</span></span>
+</a>
+</div>
+</div>
+</section>
+
+<!-- 05 Reforma PLD -->
+<section style="background:#16325B;color:#D5DEE9;padding-top:112px;padding-bottom:112px">
+<div class="wrap" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(380px,1fr));gap:72px;align-items:start">
+<div style="display:flex;flex-direction:column;gap:22px">
+
+<span class="eb" style="color:#8FB8E0">Reforma PLD 2025–2026</span>
+<h2 style="font-size:44px;line-height:1.15;color:#fff">Las nuevas obligaciones entran en vigor el 30 de noviembre de 2026</h2>
+<p style="margin:0;font-size:17px;line-height:1.8">La reforma a la LFPIORPI y las Reglas de Carácter General 2026 se aplican de forma gradual. Identificamos qué medidas ya son obligatorias para su actividad y cuáles debe preparar para su futura entrada en vigor.</p>
+<div><a class="btnw" href="08-contacto.html">Evaluar mi situación <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"></path></svg></a></div>
+</div>
+<div style="display:flex;flex-direction:column">
+<div style="display:grid;grid-template-columns:150px 1fr;gap:20px;padding:24px 0;border-top:1px solid rgba(255,255,255,.18)"><span style="font-weight:600;letter-spacing:.06em;color:#8FB8E0">30 NOV 2026</span><span>Entrada en vigor general de las Reglas: personas políticamente expuestas, contenido mínimo del manual y auditoría como obligación.</span></div>
+<div style="display:grid;grid-template-columns:150px 1fr;gap:20px;padding:24px 0;border-top:1px solid rgba(255,255,255,.18)"><span style="font-weight:600;letter-spacing:.06em;color:#8FB8E0">1 MAR 2027</span><span>Evaluación con enfoque basado en riesgo, clasificación de clientes y beneficiario controlador.</span></div>
+<div style="display:grid;grid-template-columns:150px 1fr;gap:20px;padding:24px 0;border-top:1px solid rgba(255,255,255,.18)"><span style="font-weight:600;letter-spacing:.06em;color:#8FB8E0">1 JUN 2027</span><span>Mecanismos automatizados y nuevos formatos electrónicos de avisos e informes.</span></div>
+<div style="display:grid;grid-template-columns:150px 1fr;gap:20px;padding:24px 0;border-top:1px solid rgba(255,255,255,.18);border-bottom:1px solid rgba(255,255,255,.18)"><span style="font-weight:600;letter-spacing:.06em;color:#8FB8E0">30 MAR 2029</span><span>Entrega del primer dictamen de auditoría.</span></div>
+</div>
+</div>
+</section>
+
+<!-- 06 Actividades vulnerables -->
+<section style="padding-top:112px;padding-bottom:112px">
+<div class="wrap" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(360px,1fr));gap:88px;align-items:center">
+<div style="display:flex;flex-direction:column;gap:28px;max-width:500px">
+<span class="eb">Actividades vulnerables</span>
+<h2 style="font-size:52px;line-height:1.1">¿Su actividad es vulnerable?</h2>
+
+<p style="margin:0;font-size:19px;line-height:1.8">La ley establece obligaciones de identificación de clientes, presentación de avisos y conservación de información para cada actividad. Consulte qué le aplica: umbrales, plazos y sanciones.</p>
+<a class="lnk" href="05-actividad-vulnerable.html" style="align-self:flex-start;padding-bottom:6px;border-bottom:1px solid #005E9D;font-size:15px">Ver todas las actividades <span aria-hidden="true">→</span></a>
+</div>
+<div style="position:relative;padding:0 0 28px 28px">
+<div aria-hidden="true" style="position:absolute;top:28px;left:0;right:28px;bottom:0;background:#F1F5F9;border:1px solid #C9DAEB"></div>
+<div style="position:relative;height:560px;overflow:hidden" role="region" aria-roledescription="carrusel" aria-label="Ejemplos de actividades vulnerables">
+
+<sc-for list="{{slides}}" as="s" hint-placeholder-count="5">
+<div class="{{s.cls}}" aria-hidden="{{s.hidden}}"><img class="cov" src="{{s.img}}" alt="{{s.alt}}"></div>
+</sc-for>
+<div aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,28,52,0) 40%,rgba(12,28,52,.88) 100%)"></div>
+<div style="position:absolute;left:32px;right:32px;bottom:20px;display:flex;flex-direction:column;align-items:flex-start;gap:8px">
+<a href="05-actividad-vulnerable.html" style="display:flex;flex-direction:column;gap:6px;text-decoration:none">
+<span aria-live="polite" style="font-family:'Source Serif 4',Georgia,serif;font-size:28px;line-height:1.2;color:#fff">{{slideName}}</span>
+</a>
+<div style="display:flex;gap:6px">
+<sc-for list="{{slides}}" as="s" hint-placeholder-count="5">
+<button type="button" class="{{s.dotCls}}" onClick="{{s.go}}" aria-label="{{s.label}}"><span></span></button>
+</sc-for>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- 07 Credenciales -->
+
+
+<!-- 08 Cintilla de sectores -->
+<section style="border-top: 1px solid #DDE4EC; padding-top: 112px; padding-bottom: 88px; border-style: none">
+<div class="wrap">
+<div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:44px">
+<div style="display:flex;flex-direction:column;gap:18px;max-width:760px"><span class="eb">Participación institucional</span><h2 style="font-size: 44px; line-height: 1.15; width: 802px">Presencia en los organismos que definen la Prevención de Lavado de Dinero en México</h2></div>
+<a class="btn2" href="02-quienes-somos.html">Conozca la firma</a>
+</div>
+<div style="position:relative;min-height:580px;overflow:hidden;display:flex;align-items:flex-end;color:#D5DEE9">
+<div class="ph" style="position:absolute;inset:0"><img class="cov" src="../../src/assets/images/inicio-credenciales.jpg" alt="Mtra. Angélica María Ruiz López recibiendo un reconocimiento del IMCP" style="object-position:center 28%"></div>
+<div aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,28,52,.05) 20%,rgba(12,28,52,.9) 100%),linear-gradient(90deg,rgba(12,28,52,.6) 0%,rgba(12,28,52,0) 70%)"></div>
+<div style="position:relative;width:100%;padding:56px;display:flex;flex-direction:column;gap:28px">
+<p style="margin:0;font-size:18px;line-height:1.7;color:#fff;max-width:620px">Nuestra socia directora, la Mtra. Angélica <br>María Ruiz López, miembro activo en:</p>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:28px;margin-top:6px">
+<div style="display:flex;flex-direction:column;gap:8px;padding-top:18px;border-top:1px solid rgba(255,255,255,.3)"><span class="lbl" style="color:#8FB8E0">IMCP · Desde 2021</span><span style="color:#fff;font-size:15px;line-height:1.6">Presidencia de la Comisión Nacional de Prevención de Lavado de Dinero y Anticorrupción</span></div>
+<div style="display:flex;flex-direction:column;gap:8px;padding-top:18px;border-top:1px solid rgba(255,255,255,.3)"><span class="lbl" style="color:#8FB8E0">COPARMEX</span><span style="color:#fff;font-size:15px;line-height:1.6">Vicepresidencia de Prevención de Lavado de Dinero de la Comisión Fiscal Nacional</span></div>
+<div style="display:flex;flex-direction:column;gap:8px;padding-top:18px;border-top:1px solid rgba(255,255,255,.3)"><span class="lbl" style="color:#8FB8E0">Editorial IMCP</span><span style="color:#fff;font-size:15px;line-height:1.6">Coautoría de <em>Antilavado de dinero y sus conceptos básicos</em> (2026) y <em>Precios de Transferencia en Iberoamérica</em> (2025)</span></div>
+</div>
+</div>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-top:20px">
+<div style="display:flex;flex-direction:column;justify-content:center;gap:6px;padding:28px 32px;background:#F1F5F9"><span class="lbl">Afiliaciones</span><span style="font-size:15px;color:#16325B">Organismos de los que forma parte la firma</span></div>
+<div style="height:132px;display:flex;align-items:center;justify-content:center;border:1px solid #DDE4EC;padding:0 32px"><img src="../../src/assets/logos/logo-coparmex.png" alt="COPARMEX" style="height:48px;width:auto;max-width:100%;display:block"></div>
+<div style="height:132px;display:flex;align-items:center;justify-content:center;border:1px solid #DDE4EC;padding:0 32px"><img src="../../src/assets/logos/logo-imcp.png" alt="Instituto Mexicano de Contadores Públicos, Región Noreste" style="height:64px;width:auto;max-width:100%;display:block"></div>
+</div>
+</div>
+</section><section aria-label="Sectores que atendemos" style="padding-top:40px;padding-bottom:56px">
+<div class="wrap" style="display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center; gap: 16px; margin-bottom: 28px; text-align: start">
+<span class="eb">15 sectores atendidos</span>
+
+</div>
+<p class="sr">Agrícola, ganadero, industrial, comercial, automotriz, entretenimiento, turístico, educativo, hidrocarburos, financiero, abarrotero, minero, funerario, salud, importador y exportador.</p>
+<div class="mq" aria-hidden="true" style="border-top: 1px solid #DDE4EC; border-bottom: 1px solid #DDE4EC; padding: 30px 0; border-style: none">
+<div class="mq-track">
+<span class="mq-i">Agrícola</span><img class="mq-s" src="../../src/assets/brand/isotipo.png" alt=""><span class="mq-i">Ganadero</span><img class="mq-s" src="../../src/assets/brand/isotipo.png" alt=""><span class="mq-i">Industrial</span><img class="mq-s" src="../../src/assets/brand/isotipo.png" alt=""><span class="mq-i">Comercial</span><img class="mq-s" src="../../src/assets/brand/isotipo.png" alt=""><span class="mq-i">Automotriz</span><img class="mq-s" src="../../src/assets/brand/isotipo.png" alt=""><span class="mq-i">Entretenimiento</span><img class="mq-s" src="../../src/assets/brand/isotipo.png" alt=""><span class="mq-i">Turístico</span><img class="mq-s" src="../../src/assets/brand/isotipo.png" alt=""><span class="mq-i">Educativo</span><img class="mq-s" src="../../src/assets/brand/isotipo.png" alt=""><span class="mq-i">Hidrocarburos</span><img class="mq-s" src="../../src/assets/brand/isotipo.png" alt=""><span class="mq-i">Financiero</span><img class="mq-s" src="../../src/assets/brand/isotipo.png" alt=""><span class="mq-i">Abarrotero</span><img class="mq-s" src="../../src/assets/brand/isotipo.png" alt=""><span class="mq-i">Minero</span><img class="mq-s" src="../../src/assets/brand/isotipo.png" alt=""><span class="mq-i">Funerario</span><img class="mq-s" src="../../src/assets/brand/isotipo.png" alt=""><span class="mq-i">Salud</span><img class="mq-s" src="../../src/assets/brand/isotipo.png" alt=""><span class="mq-i">Importador y exportador</span><img class="mq-s" src="../../src/assets/brand/isotipo.png" alt="">
+<span class="mq-i">Agrícola</span><img class="mq-s" src="../../src/assets/brand/isotipo.png" alt=""><span class="mq-i">Ganadero</span><img class="mq-s" src="../../src/assets/brand/isotipo.png" alt=""><span class="mq-i">Industrial</span><img class="mq-s" src="../../src/assets/brand/isotipo.png" alt=""><span class="mq-i">Comercial</span><img class="mq-s" src="../../src/assets/brand/isotipo.png" alt=""><span class="mq-i">Automotriz</span><img class="mq-s" src="../../src/assets/brand/isotipo.png" alt=""><span class="mq-i">Entretenimiento</span><img class="mq-s" src="../../src/assets/brand/isotipo.png" alt=""><span class="mq-i">Turístico</span><img class="mq-s" src="../../src/assets/brand/isotipo.png" alt=""><span class="mq-i">Educativo</span><img class="mq-s" src="../../src/assets/brand/isotipo.png" alt=""><span class="mq-i">Hidrocarburos</span><img class="mq-s" src="../../src/assets/brand/isotipo.png" alt=""><span class="mq-i">Financiero</span><img class="mq-s" src="../../src/assets/brand/isotipo.png" alt=""><span class="mq-i">Abarrotero</span><img class="mq-s" src="../../src/assets/brand/isotipo.png" alt=""><span class="mq-i">Minero</span><img class="mq-s" src="../../src/assets/brand/isotipo.png" alt=""><span class="mq-i">Funerario</span><img class="mq-s" src="../../src/assets/brand/isotipo.png" alt=""><span class="mq-i">Salud</span><img class="mq-s" src="../../src/assets/brand/isotipo.png" alt=""><span class="mq-i">Importador y exportador</span><img class="mq-s" src="../../src/assets/brand/isotipo.png" alt="">
+</div>
+</div>
+</section>
+
+<!-- 09 Metodología escalonada -->
+<section style="padding-top:88px;padding-bottom:120px">
+<div class="wrap">
+<div class="metw">
+<div class="meth"><span class="eb">Metodología</span><h2 style="font-size:44px;line-height:1.15">Cómo trabajamos</h2><p style="margin:0;max-width:480px;font-size:16px;line-height:1.8">Un proceso en cuatro etapas, del primer dato que nos comparte a la defensa de su cumplimiento ante la autoridad.</p></div>
+<div class="{{metCls}}" data-met="1">
+<div class="mc" style="background:#F1F5F9;color:#3A4552"><span style="font-family:'Source Serif 4',Georgia,serif;font-size:56px;line-height:1;color:#005E9D">01</span><div class="mcx"><strong style="font-size:18px;color:#16325B">Información inicial</strong><span style="font-size:15px;line-height:1.7">Reunimos la información financiera, contractual y corporativa de su empresa.</span></div></div>
+<div class="mc" style="background:#E6EDF5;color:#3A4552"><span style="font-family:'Source Serif 4',Georgia,serif;font-size:56px;line-height:1;color:#005E9D">02</span><div class="mcx"><strong style="font-size:18px;color:#16325B">Diagnóstico</strong><span style="font-size:15px;line-height:1.7">Identificamos obligaciones, omisiones y riesgos, y definimos las prioridades de atención.</span></div></div>
+<div class="mc" style="background:#C9DAEB;color:#2A3441"><span style="font-family:'Source Serif 4',Georgia,serif;font-size:56px;line-height:1;color:#16325B">03</span><div class="mcx"><strong style="font-size:18px;color:#16325B">Desarrollo</strong><span style="font-size:15px;line-height:1.7">Elaboramos la documentación y los mecanismos de cumplimiento, con trazabilidad de cada fundamento.</span></div></div>
+<div class="mc" style="background:#16325B;color:#D5DEE9"><span style="font-family:'Source Serif 4',Georgia,serif;font-size:56px;line-height:1;color:#8FB8E0">04</span><div class="mcx"><strong style="font-size:20px;color:#fff">Entrega y seguimiento</strong><span style="font-size:15px;line-height:1.7">Entregamos, presentamos ante la autoridad y le acompañamos en revisiones y requerimientos.</span><a class="lnk" href="08-contacto.html" style="color:#fff;margin-top:8px">Solicitar asesoría <span aria-hidden="true">→</span></a></div></div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- 09 Blog -->
+<section style="padding-top:112px;padding-bottom:112px">
+<div class="wrap">
+
+<div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:48px">
+<div style="display:flex;flex-direction:column;gap:18px"><span class="eb">Blog</span><h2 style="font-size:44px;line-height:1.15">Análisis y actualizaciones</h2></div>
+<a class="lnk" href="06-blog.html">Ver todos los artículos <span aria-hidden="true">→</span></a>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:32px">
+<a href="07-blog-articulo.html" style="display:flex;flex-direction:column;gap:14px;text-decoration:none;color:#3A4552"><span class="ph" style="height:230px;display:block"><span class="phc">Foto · Documentos regulatorios y firma</span></span><span class="lbl">Prevención de Lavado de Dinero</span><span style="font-family:'Source Serif 4',Georgia,serif;font-size:24px;line-height:1.3;color:#16325B">Reforma a la LFPIORPI: qué cambia y cuándo debe cumplir su empresa</span><span style="font-size:13px;color:#5B6873">[Autor] · [Fecha] · 7 min de lectura</span></a>
+<a href="07-blog-articulo.html" style="display:flex;flex-direction:column;gap:14px;text-decoration:none;color:#3A4552"><span class="ph" style="height:230px;display:block"><span class="phc">Foto · Laptop con gráficas financieras</span></span><span class="lbl">Precios de Transferencia</span><span style="font-family:'Source Serif 4',Georgia,serif;font-size:24px;line-height:1.3;color:#16325B">Declaraciones maestra, local y país por país: ¿su grupo está obligado?</span><span style="font-size:13px;color:#5B6873">[Autor] · [Fecha] · 6 min de lectura</span></a>
+<a href="07-blog-articulo.html" style="display:flex;flex-direction:column;gap:14px;text-decoration:none;color:#3A4552"><span class="ph" style="height:230px;display:block"><span class="phc">Foto · Reunión de consejo en oficina de cristal</span></span><span class="lbl">Legal Corporativo</span><span style="font-family:'Source Serif 4',Georgia,serif;font-size:24px;line-height:1.3;color:#16325B">Beneficiario controlador: la información que su empresa debe identificar y conservar</span><span style="font-size:13px;color:#5B6873">[Autor] · [Fecha] · 5 min de lectura</span></a>
+</div>
+</div>
+</section>
+
+<!-- 10 CTA de cierre -->
+<section style="background:#F1F5F9;padding-top:112px;padding-bottom:112px">
+<div class="wrap" style="max-width:860px;text-align:center;display:flex;flex-direction:column;gap:22px;align-items:center">
+<span class="eb">Contacto</span>
+<h2 style="font-size:44px;line-height:1.15">¿Su empresa está preparada para sus obligaciones?</h2>
+<p style="margin:0;font-size:17px;line-height:1.8;max-width:680px">Cuéntenos su actividad y le orientamos sobre las obligaciones que le aplican. Atendemos en todo México en línea y con reuniones presenciales bajo cita.</p>
+<div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center"><a class="btn" href="08-contacto.html">Solicitar asesoría</a><a class="btn2" href="https://wa.me/523339079868">Escribir por WhatsApp</a></div>
+</div>
+</section>
+
+<!-- Footer -->
+<footer style="position:relative;overflow:hidden;background:#0E2342;color:#B9C6D6;font-size:14px">
+<div class="fimg" aria-hidden="true"></div>
+<div class="wrap" style="position:relative;z-index:1;padding-top:104px;padding-bottom:40px">
+<div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:64px">
+<div style="flex:1 1 340px;max-width:440px;display:flex;flex-direction:column;gap:30px;align-items:flex-start">
+<img src="../../src/assets/brand/logo-horizontal-blanco.png" alt="Impulsa Patrimonial · Asesoría legal y fiscal" style="height:60px;width:auto;display:block">
+<p style="margin:0;font-family:'Source Serif 4',Georgia,serif;font-size:30px;line-height:1.3;color:#fff">Impulsamos el crecimiento de las empresas con seguridad jurídica y patrimonial.</p>
+<a class="btno" href="08-contacto.html">Agendar asesoría <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"></path></svg></a>
+</div>
+<div class="fcols" style="flex:1 1 520px;max-width:600px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:48px 56px">
+<div style="display:flex;flex-direction:column;gap:44px">
+<div style="display:flex;flex-direction:column;gap:12px"><span class="fh">Sitio</span><a class="fl" href="01-inicio.html">Inicio</a><a class="fl" href="02-quienes-somos.html">Quiénes somos</a><a class="fl" href="03-servicios.html">Servicios</a><a class="fl" href="05-actividad-vulnerable.html">Actividades vulnerables</a><a class="fl" href="06-blog.html">Blog</a><a class="fl" href="08-contacto.html">Contacto</a></div>
+<div style="display:flex;flex-direction:column;gap:12px"><span class="fh">Servicios</span><a class="fl" href="04-servicio-pld.html">Prevención de Lavado de Dinero</a><a class="fl" href="04-servicio-pld.html">Precios de Transferencia</a><a class="fl" href="04-servicio-pld.html">Legal Corporativo</a><a class="fl" href="03-servicios.html">Complementarios</a></div>
+</div>
+<div style="display:flex;flex-direction:column;gap:44px">
+<div style="display:flex;flex-direction:column;gap:12px"><span class="fh">Oficinas</span><span>Ciudad de México</span><span>Guadalajara</span><span>Morelia</span><span>Querétaro</span><span style="color:#fff;margin-top:6px;padding-top:12px;border-top:1px solid rgba(255,255,255,.18)">Atención en línea en todo México</span></div>
+<div style="display:flex;flex-direction:column;gap:12px"><span class="fh">Contacto</span><a class="fl" href="https://wa.me/523339079868">+52 33 3907 9868</a><a class="fl" href="mailto:contacto@impulsapatrimonial.com" style="overflow-wrap:anywhere">contacto@impulsapatrimonial.com</a>
+<div style="display:flex;gap:10px;margin-top:8px">
+<a class="soc" href="https://www.instagram.com/" aria-label="Instagram de Impulsa Patrimonial"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="0.8"></circle></svg></a>
+<a class="soc" href="https://www.linkedin.com/" aria-label="LinkedIn de Impulsa Patrimonial"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M8 10v7M8 7v.01M12 17v-7M12 13a3 3 0 0 1 6 0v4"></path></svg></a>
+<a class="soc" href="https://wa.me/523339079868" aria-label="WhatsApp de Impulsa Patrimonial"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"></path><path d="M9 9.5c.3 1.8 1.7 3.4 3.5 4l1.2-1.2 2 1-.4 1.6c-3.6.3-7.2-3.1-7.1-6.6L9.8 8l1 2z"></path></svg></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div style="border-top:1px solid rgba(255,255,255,.16);margin-top:80px;padding-top:24px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;font-size:13px">
+<span>© 2026 Impulsa Patrimonial · Diseñado por <a href="https://docabyte.com" style="color:#fff;font-weight:600;text-decoration:none">Docabyte</a></span>
+<span style="display:flex;flex-wrap:wrap;gap:24px"><a class="fl" href="09-legales.html">Aviso de privacidad</a><a class="fl" href="09-legales.html">Términos de uso</a><a class="fl" href="09-legales.html">Política de cookies</a><a class="fl" href="09-legales.html">Descargo de responsabilidad</a></span>
+</div>
+</div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"anotaciones":{"editor":"boolean","default":true},"$preview":{"width":1440,"height":7000}}'>
+class Component extends DCLogic {
+constructor(props) {
+super(props);
+this.state = { scrolled: false, slide: 0, metIn: false };
+}
+_startCarousel() {
+if (this._t) clearInterval(this._t);
+let reduce = false;
+try { reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (e) {}
+if (!reduce) this._t = setInterval(() => this.setState((st) => ({ slide: (st.slide + 1) % 5 })), 4500);
+}
+componentDidMount() {
+this._onScroll = () => {
+const y = window.pageYOffset || (document.documentElement && document.documentElement.scrollTop) || 0;
+const s = y > 48;
+if (s !== this.state.scrolled) this.setState({ scrolled: s });
+};
+window.addEventListener('scroll', this._onScroll, { passive: true });
+this._onScroll();
+const v = document.querySelector('video[data-hero-video]');
+if (v) { v.muted = true; const p = v.play && v.play(); if (p && p.catch) p.catch(() => {}); }
+this._startCarousel();
+const el = document.querySelector('[data-met]');
+let reduceMet = false;
+try { reduceMet = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (e) {}
+if (el && !reduceMet && 'IntersectionObserver' in window) {
+this._io = new IntersectionObserver((entries) => {
+entries.forEach((e) => {
+if (e.intersectionRatio >= 0.35) {
+if (!this._mt && !this.state.metIn) this._mt = setTimeout(() => { this._mt = null; this.setState({ metIn: true }); }, 1500);
+} else if (!e.isIntersecting) {
+if (this._mt) { clearTimeout(this._mt); this._mt = null; }
+if (this.state.metIn) this.setState({ metIn: false });
+}
+});
+}, { threshold: [0, 0.35] });
+this._io.observe(el);
+} else {
+this.setState({ metIn: true });
+}
+}
+componentWillUnmount() {
+window.removeEventListener('scroll', this._onScroll);
+if (this._t) clearInterval(this._t);
+if (this._io) this._io.disconnect();
+if (this._mt) clearTimeout(this._mt);
+}
+renderVals() {
+const show = this.props.anotaciones ?? true;
+const acts = [
+{ name: 'Compraventa de inmuebles', img: '../../src/assets/images/av-compraventa-inmuebles.jpg', alt: 'Asesora inmobiliaria con carpeta, planos y llaves' },
+{ name: 'Comercialización de vehículos', img: '../../src/assets/images/av-comercializacion-vehiculos.jpg', alt: 'Apretón de manos frente a un automóvil en agencia' },
+{ name: 'Joyería y metales preciosos', img: '../../src/assets/images/av-joyeria-metales.jpg', alt: 'Anillos con piedras preciosas en vitrina' },
+{ name: 'Activos virtuales', img: '../../src/assets/images/av-activos-virtuales.jpg', alt: 'Monedas de criptoactivos frente a una gráfica de operaciones' },
+{ name: 'Juegos con apuesta y sorteos', img: '../../src/assets/images/av-juegos-apuestas.jpg', alt: 'Mesa de ruleta con fichas de apuesta' }
+];
+const cur = this.state.slide;
+const slides = acts.map((a, i) => {
+const on = i === cur;
+return {
+img: a.img,
+alt: a.alt,
+cls: 'slide ph s' + (i + 1) + (on ? ' on' : ''),
+hidden: on ? 'false' : 'true',
+dotCls: 'dot' + (on ? ' on' : ''),
+label: 'Ver ' + a.name,
+go: () => { this.setState({ slide: i }); this._startCarousel(); }
+};
+});
+return {
+notesClass: show ? '' : 'no-notes',
+navTop: !this.state.scrolled,
+navScrolled: this.state.scrolled,
+slides,
+slideName: acts[cur].name,
+slideNum: '0' + (cur + 1) + ' / 05',
+metCls: 'met' + (this.state.metIn ? ' in' : '')
+};
+}
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Prevención de Lavado de Dinero — Impulsa Patrimonial</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&amp;family=Montserrat:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#fff}
+a{color:#005E9D}a:hover{color:#16325B}
+.wf{font-family:'Montserrat',system-ui,sans-serif;color:#3A4552;background:#fff;font-size:16px;line-height:1.7}
+.wf *{box-sizing:border-box}
+.wf h1,.wf h2,.wf h3{font-family:'Source Serif 4',Georgia,serif;font-weight:400;color:#16325B;margin:0;letter-spacing:-.01em}
+.wrap{max-width:1200px;margin:0 auto;padding-left:32px;padding-right:32px}
+.eb{display:inline-flex;align-items:center;gap:14px;font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#005E9D}
+.eb::before{content:"";width:32px;height:1px;background:currentColor;display:block}
+.lbl{font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#005E9D}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 28px;background:#16325B;color:#fff;text-decoration:none;font-weight:600;font-size:14px;letter-spacing:.04em;border:1px solid #16325B}
+.btn:hover{color:#fff;background:#005E9D;border-color:#005E9D}
+.btn2{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 28px;background:transparent;color:#16325B;text-decoration:none;font-weight:600;font-size:14px;letter-spacing:.04em;border:1px solid rgba(22,50,91,.35)}
+.btn2:hover{color:#16325B;border-color:#16325B}
+.btnw{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 28px;background:#fff;color:#16325B;text-decoration:none;font-weight:600;font-size:14px;letter-spacing:.04em;border:1px solid #fff}
+.btnw:hover{color:#16325B;background:#E8EEF5}
+.btno{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 28px;background:rgba(255,255,255,.06);color:#fff;text-decoration:none;font-weight:600;font-size:14px;letter-spacing:.04em;border:1px solid rgba(255,255,255,.55)}
+.btno:hover{color:#fff;background:rgba(255,255,255,.14)}
+.lnk{display:inline-flex;align-items:center;gap:8px;color:#005E9D;font-weight:600;font-size:14px;letter-spacing:.03em;text-decoration:none}
+.lnk:hover{color:#16325B}
+.ph{position:relative;overflow:hidden;background:linear-gradient(140deg,#2C5283 0%,#16325B 55%,#0E2342 100%)}
+.ph::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(115deg,rgba(255,255,255,.035) 0 2px,transparent 2px 22px)}
+.phc{position:absolute;left:16px;right:16px;bottom:14px;font-family:'IBM Plex Mono',monospace;font-size:11px;line-height:1.45;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.75)}
+.hero-img{position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,28,52,.72) 0%,rgba(12,28,52,.22) 38%,rgba(12,28,52,.9) 100%),repeating-linear-gradient(115deg,rgba(255,255,255,.03) 0 2px,transparent 2px 26px),linear-gradient(125deg,#3A6496 0%,#1D4070 45%,#0E2342 100%)}
+.hcap{position:absolute;right:32px;top:116px;z-index:2;max-width:320px;text-align:right;font-family:'IBM Plex Mono',monospace;font-size:11px;line-height:1.5;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.62)}
+.hbadge{display:inline-flex;align-items:center;gap:10px;align-self:flex-start;padding:8px 16px 8px 14px;border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.08);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);color:#fff;font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase}
+.navl{color:rgba(255,255,255,.86);text-decoration:none;font-weight:500}
+.navl:hover{color:#fff}
+.navon{color:#fff;text-decoration:none;font-weight:600;box-shadow:inset 0 -1px 0 #fff;padding-bottom:4px}
+.navon:hover{color:#fff}
+.navd{color:#16325B;text-decoration:none;font-weight:500}
+.navd:hover{color:#005E9D}
+.navdon{color:#005E9D;text-decoration:none;font-weight:600;box-shadow:inset 0 -1px 0 #005E9D;padding-bottom:4px}
+.navdon:hover{color:#005E9D}
+.chip{display:flex;flex-direction:column;gap:2px;padding:12px 16px;font-size:13px;font-weight:600;line-height:1.3}
+.svc{display:flex;flex-direction:column;gap:10px;padding-top:22px;border-top:1px solid #C9D6E4}
+.svc b{font-size:12px;font-weight:600;letter-spacing:.1em;color:#005E9D}
+.svc strong{font-size:17px;font-weight:600;line-height:1.35;color:#16325B}
+.svc span{font-size:15px;line-height:1.7}
+.faq{width:100%;display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:68px;padding:18px 0;background:none;border:0;border-top:1px solid #DDE4EC;font:inherit;font-weight:600;font-size:17px;text-align:left;cursor:pointer;color:#16325B}
+.pill{display:inline-flex;align-items:center;min-height:44px;padding:0 18px;border:1px solid #C9D6E4;background:#fff;color:#16325B;font-size:14px;font-weight:500;text-decoration:none}
+.pill:hover{border-color:#005E9D;color:#005E9D}
+.fimg{position:absolute;inset:0;background:linear-gradient(180deg,rgba(22,50,91,.93),rgba(12,28,52,.97)),repeating-linear-gradient(115deg,rgba(255,255,255,.05) 0 2px,transparent 2px 24px),linear-gradient(125deg,#3A6496,#0E2342)}
+.fh{color:#fff;font-weight:600;font-size:12px;letter-spacing:.18em;text-transform:uppercase;margin-bottom:6px}
+.fl{color:#B9C6D6;text-decoration:none}
+.fl:hover{color:#fff}
+.soc{width:44px;height:44px;display:flex;align-items:center;justify-content:center;border:1px solid rgba(255,255,255,.3);color:#fff;text-decoration:none}
+.soc:hover{color:#fff;background:rgba(255,255,255,.1)}
+.tag{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#9B1C6C;background:#FCE7F3;display:inline-block;padding:4px 8px;line-height:1.4}
+.no-notes .tag,.no-notes .phc,.no-notes .hcap{display:none}
+@media (max-width:720px){.wrap{padding-left:16px;padding-right:16px}.wf h1{font-size:40px!important}.wf h2{font-size:30px!important}.hcap{display:none}}
+@media (max-width:640px){.fcols{grid-template-columns:1fr!important}}
+</style>
+</helmet>
+<div class="wf {{notesClass}}">
+
+<div style="position:sticky;top:0;z-index:50;height:0">
+<sc-if value="{{navTop}}" hint-placeholder-val="{{true}}">
+<header style="position: absolute; top: 0; left: 0; right: 0; border-bottom: 1px solid rgba(255,255,255,.14); border-style: none">
+<div class="wrap" style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px;padding-top:22px;padding-bottom:22px">
+<a href="01-inicio.html" aria-label="Impulsa Patrimonial, ir a Inicio" style="display:block;line-height:0"><img src="../../src/assets/brand/logo-horizontal-blanco.png" alt="Impulsa Patrimonial · Asesoría legal y fiscal" style="height:42px;width:auto;display:block"></a>
+<nav aria-label="Principal" style="display:flex;flex-wrap:wrap;gap:32px;font-size:14px;letter-spacing:.02em">
+<a class="navl" href="01-inicio.html">Inicio</a>
+<a class="navl" href="02-quienes-somos.html">Quiénes somos</a>
+<a class="navon" href="03-servicios.html">Servicios ▾</a>
+<a class="navl" href="05-actividad-vulnerable.html">Actividades vulnerables</a>
+<a class="navl" href="06-blog.html">Blog</a>
+</nav>
+<a class="btnw" href="08-contacto.html" style="min-height:46px;padding:0 22px">Contactar <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"></path></svg></a>
+</div>
+</header>
+</sc-if>
+<sc-if value="{{navScrolled}}" hint-placeholder-val="{{false}}">
+<header style="position:absolute;top:0;left:0;right:0;background:rgba(255,255,255,.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(22,50,91,.08);box-shadow:0 8px 30px rgba(12,28,52,.08)">
+<div class="wrap" style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px;padding-top:14px;padding-bottom:14px">
+<a href="01-inicio.html" aria-label="Impulsa Patrimonial, ir a Inicio" style="display:block;line-height:0"><img src="../../src/assets/brand/logo-horizontal-color.png" alt="Impulsa Patrimonial · Asesoría legal y fiscal" style="height:38px;width:auto;display:block"></a>
+<nav aria-label="Principal" style="display:flex;flex-wrap:wrap;gap:32px;font-size:14px;letter-spacing:.02em">
+<a class="navd" href="01-inicio.html">Inicio</a>
+<a class="navd" href="02-quienes-somos.html">Quiénes somos</a>
+<a class="navdon" href="03-servicios.html">Servicios ▾</a>
+<a class="navd" href="05-actividad-vulnerable.html">Actividades vulnerables</a>
+<a class="navd" href="06-blog.html">Blog</a>
+</nav>
+<a class="btn" href="08-contacto.html" style="min-height:44px;padding:0 22px">Contactar <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"></path></svg></a>
+</div>
+</header>
+</sc-if>
+</div>
+
+<!-- 01 Hero interior -->
+<section style="position:relative;min-height:520px;display:flex;color:#fff;overflow:hidden">
+<img src="../../src/assets/images/servicio-pld.jpg" alt="Abogado trabajando junto a una estatuilla de la justicia" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 42%;display:block">
+<div aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,28,52,.72) 0%,rgba(12,28,52,.3) 38%,rgba(12,28,52,.9) 100%)"></div>
+<div class="wrap" style="position:relative;z-index:2;width:100%;display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:24px;padding-top:180px;padding-bottom:64px">
+<div style="display:flex;flex-direction:column;gap:20px;max-width:820px">
+
+<span class="hbadge"><span style="width:6px;height:6px;background:#8FB8E0;display:block"></span>Práctica principal</span>
+<h1 style="font-size:60px;line-height:1.06;color:#fff">Prevención de Lavado de Dinero</h1>
+</div>
+
+</div>
+</section>
+
+<!-- 02 Propuesta de valor -->
+<section style="padding-top:88px;padding-bottom:88px;border-bottom:1px solid #DDE4EC">
+<div class="wrap" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 40px">
+<p style="margin: 0; max-width: 720px; font-family: 'Source Serif 4',Georgia,serif; font-size: 30px; line-height: 1.4; color: #16325B; width: 825px; text-align: left">Asesoría especializada para personas físicas y morales que realizan actividades vulnerables en México.</p>
+<div style="display:flex;flex-wrap:wrap;gap:12px"><a class="btn" href="08-contacto.html">Solicitar asesoría en PLD</a><a class="btn2" href="#faq">Preguntas frecuentes</a></div>
+</div>
+</section>
+
+<!-- 03 Entorno regulatorio -->
+<section style="padding-top:112px;padding-bottom:112px">
+<div class="wrap" style="display:flex;flex-direction:column;gap:48px">
+<div style="display:flex;flex-direction:column;gap:18px;max-width:760px"><span class="eb">Entorno regulatorio</span><h2 style="font-size:44px;line-height:1.15">Una respuesta al entorno regulatorio</h2></div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(360px,1fr));gap:48px;font-size:16px;line-height:1.85">
+<p style="margin:0">Las actividades vulnerables pueden ser utilizadas para introducir recursos de procedencia ilícita en operaciones aparentemente legítimas. Por esa razón, la legislación mexicana establece obligaciones de identificación, conocimiento de clientes, conservación de información y presentación de avisos, entre otras medidas destinadas a detectar y prevenir riesgos.</p>
+<p style="margin:0">El marco jurídico evolucionó con la reforma de 2025 a la Ley Federal para la Prevención e Identificación de Operaciones con Recursos de Procedencia Ilícita y con las Reglas de Carácter General de 2026, que profundizan la evaluación de riesgos, el conocimiento de clientes y beneficiarios controladores, los controles internos, la capacitación y la revisión del cumplimiento.</p>
+</div>
+<blockquote style="margin:0;padding:8px 0 8px 32px;border-left:2px solid #005E9D;max-width:900px;font-family:'Source Serif 4',Georgia,serif;font-style:italic;font-size:26px;line-height:1.5;color:#16325B">El objetivo es que cada sujeto obligado conozca qué debe cumplir, cómo acreditarlo y qué medidas conviene adoptar para reducir contingencias administrativas y fortalecer la trazabilidad de sus operaciones.</blockquote>
+</div>
+</section>
+
+<!-- 04 A quién aplica -->
+<section style="background:#F1F5F9;padding-top:112px;padding-bottom:112px">
+<div class="wrap" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(380px,1fr));gap:64px;align-items:start">
+<div style="display:flex;flex-direction:column;gap:18px">
+<span class="eb">A quién acompañamos</span>
+<h2 style="font-size:40px;line-height:1.15">¿A quién aplica?</h2>
+<div class="ph" style="height:280px;margin-top:12px" role="img" aria-label="Revisión de expedientes"><span class="phc">Foto · Manos revisando expedientes y contratos</span></div>
+</div>
+<div style="display:flex;flex-direction:column">
+<div style="padding:24px 0;border-top:1px solid #C9D6E4;display:grid;grid-template-columns:40px 1fr;gap:16px"><span style="font-family:'Source Serif 4',Georgia,serif;font-size:22px;color:#005E9D">01</span><span><strong style="color:#16325B">Personas físicas y morales con actividades vulnerables</strong><br>Quienes realizan alguna de las actividades del artículo 17 de la Ley y superan los umbrales aplicables.</span></div>
+<div style="padding:24px 0;border-top:1px solid #C9D6E4;display:grid;grid-template-columns:40px 1fr;gap:16px"><span style="font-family:'Source Serif 4',Georgia,serif;font-size:22px;color:#005E9D">02</span><span><strong style="color:#16325B">Agencias aduanales, fideicomisos y otras figuras jurídicas</strong><br>Que deberán darse de baja y de alta con el nuevo formato oficial a partir de febrero de 2027.</span></div>
+<div style="padding:24px 0;border-top:1px solid #C9D6E4;display:grid;grid-template-columns:40px 1fr;gap:16px"><span style="font-family:'Source Serif 4',Georgia,serif;font-size:22px;color:#005E9D">03</span><span><strong style="color:#16325B">Entidades del sector financiero</strong><br>Auditoría e informe anual, programa de capacitación, manuales y sistemas tecnológicos.</span></div>
+<div style="padding:24px 0;border-top:1px solid #C9D6E4;border-bottom:1px solid #C9D6E4;display:grid;grid-template-columns:40px 1fr;gap:16px"><span style="font-family:'Source Serif 4',Georgia,serif;font-size:22px;color:#005E9D">04</span><span><strong style="color:#16325B">Personas con cuentas bloqueadas por la UIF</strong><br>Garantía de audiencia, amparo indirecto y estrategia de defensa.</span></div>
+</div>
+</div>
+</section>
+
+<!-- 05 Servicios especializados -->
+<section style="padding-top:112px;padding-bottom:112px">
+<div class="wrap">
+<div style="display:flex;flex-direction:column;gap:18px;margin-bottom:36px;max-width:760px"><span class="eb">Servicios especializados</span><h2 style="font-size:44px;line-height:1.15">Del diagnóstico a la defensa</h2></div>
+<div style="display:grid;grid-template-columns:2fr 5fr 1.4fr 2fr;gap:4px;margin-bottom:56px">
+<span class="chip" style="background:#E6EDF5;color:#16325B"><small style="font-size:11px;letter-spacing:.08em">01 · 11</small>Diagnóstico</span>
+<span class="chip" style="background:#C9DAEB;color:#16325B"><small style="font-size:11px;letter-spacing:.08em">02–07</small>Implementación</span>
+<span class="chip" style="background:#005E9D;color:#fff"><small style="font-size:11px;letter-spacing:.08em">08</small>Formación</span>
+<span class="chip" style="background:#16325B;color:#fff"><small style="font-size:11px;letter-spacing:.08em">09–10</small>Evaluación y defensa</span>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:44px 48px">
+<div class="svc"><b>01</b><strong>Diagnóstico regulatorio y determinación de obligaciones</strong><span>Analizamos sus operaciones y su modelo de negocio para determinar si se actualiza alguna actividad vulnerable del artículo 17, así como los umbrales y obligaciones aplicables.</span></div>
+<div class="svc"><b>02</b><strong>Alta, actualización y regularización ante la autoridad</strong><span>Asesoramos en el alta y registro, la actualización de datos y la regularización de obligaciones ante las autoridades competentes.</span></div>
+<div class="svc"><b>03</b><strong>Identificación y conocimiento de clientes y usuarios</strong><span>Diseñamos políticas, formatos y expedientes de identificación, incluida la información del beneficiario controlador.</span></div>
+<div class="svc"><b>04</b><strong>Enfoque basado en riesgos</strong><span>Metodologías para identificar, evaluar, clasificar y mitigar riesgos de clientes, productos, operaciones y canales.</span></div>
+<div class="svc"><b>05</b><strong>Manual de políticas internas y procedimientos</strong><span>Elaboramos o actualizamos manuales adaptados a su actividad, su estructura y las disposiciones vigentes.</span></div>
+<div class="svc"><b>06</b><strong>Avisos, informes y monitoreo de operaciones</strong><span>Identificamos operaciones sujetas a aviso, controlamos plazos y diseñamos procesos para prevenir omisiones y presentaciones extemporáneas.</span></div>
+<div class="svc"><b>07</b><strong>Medidas internas de control y mecanismos automatizados</strong><span>Definimos controles y flujos de autorización, y asesoramos los requerimientos funcionales de los mecanismos automatizados.</span></div>
+<div class="svc"><b>08</b><strong>Capacitación especializada</strong><span>Sesiones para responsables de cumplimiento, directivos y personal operativo, conforme a las necesidades de cada organización.</span></div>
+<div class="svc"><b>09</b><strong>Auditoría y evaluación de cumplimiento</strong><span>Revisiones independientes del grado de cumplimiento y de la eficacia de los controles, con hallazgos y recomendaciones.</span></div>
+<div class="svc"><b>10</b><strong>Visitas de verificación y defensa administrativa</strong><span>Preparación y atención de visitas y requerimientos, y defensa frente a resoluciones y sanciones.</span></div>
+<div class="svc" style="background:#F1F5F9;border-top:2px solid #005E9D;padding:22px 24px 26px"><b>11 · Art. 55 de la Ley · Art. 55 Bis del Reglamento</b><strong>Autorregularización espontánea</strong><span>Regularizamos obligaciones omitidas antes del inicio de las facultades de verificación, para acceder a la abstención de sanción.</span></div>
+</div>
+</div>
+</section>
+
+<!-- 06 Calendario de exigibilidad -->
+<section style="background:#16325B;color:#D5DEE9;padding-top:112px;padding-bottom:112px">
+<div class="wrap">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(380px,1fr));gap:48px;margin-bottom:48px">
+<div style="display:flex;flex-direction:column;gap:18px"><span class="eb" style="color:#8FB8E0">Calendario de exigibilidad</span><h2 style="font-size:44px;line-height:1.15;color:#fff">Aplicación gradual de las nuevas obligaciones</h2></div>
+<p style="margin:0;font-size:16px;line-height:1.85;align-self:end">Cada proyecto considera la normativa vigente, las disposiciones transitorias y el calendario de exigibilidad, para distinguir las medidas ya obligatorias de aquellas que debe preparar para su futura entrada en vigor.</p>
+</div>
+<div style="display:flex;flex-direction:column;font-size:15px">
+<span class="lbl" style="color:#8FB8E0;padding:14px 0">Etapa I · Estructural</span>
+<div style="display:grid;grid-template-columns:160px 1fr;gap:24px;padding:18px 0;border-top:1px solid rgba(255,255,255,.18)"><strong style="color:#fff">30 nov 2026</strong><span>Entrada en vigor general de las Reglas: personas políticamente expuestas, contenido mínimo del manual, mecanismos de prevención, auditoría y activos virtuales.</span></div>
+<span class="lbl" style="color:#8FB8E0;padding:28px 0 14px">Etapa II · Operativa</span>
+<div style="display:grid;grid-template-columns:160px 1fr;gap:24px;padding:18px 0;border-top:1px solid rgba(255,255,255,.18)"><strong style="color:#fff">Ene–dic 2027</strong><span>Primer periodo anual de capacitación.</span></div>
+<div style="display:grid;grid-template-columns:160px 1fr;gap:24px;padding:18px 0;border-top:1px solid rgba(255,255,255,.18)"><strong style="color:#fff">1 feb 2027</strong><span>Nuevo formato oficial de alta y registro; baja y nueva alta para agencias aduanales y figuras como el fideicomiso.</span></div>
+<div style="display:grid;grid-template-columns:160px 1fr;gap:24px;padding:18px 0;border-top:1px solid rgba(255,255,255,.18)"><strong style="color:#fff">1 mar 2027</strong><span>Evaluación con enfoque basado en riesgo, clasificación de clientes y beneficiario controlador en operaciones nuevas.</span></div>
+<span class="lbl" style="color:#8FB8E0;padding:28px 0 14px">Etapa III · Tecnológica y de verificación</span>
+<div style="display:grid;grid-template-columns:160px 1fr;gap:24px;padding:18px 0;border-top:1px solid rgba(255,255,255,.18)"><strong style="color:#fff">30 may 2027</strong><span>Activos virtuales: actualización de la información del artículo 10 Bis.</span></div>
+<div style="display:grid;grid-template-columns:160px 1fr;gap:24px;padding:18px 0;border-top:1px solid rgba(255,255,255,.18)"><strong style="color:#fff">1 jun 2027</strong><span>Mecanismos automatizados y nuevos formatos electrónicos de avisos e informes.</span></div>
+<div style="display:grid;grid-template-columns:160px 1fr;gap:24px;padding:18px 0;border-top:1px solid rgba(255,255,255,.18)"><strong style="color:#fff">30 jul 2027</strong><span>Sistema de notificaciones electrónicas.</span></div>
+<div style="display:grid;grid-template-columns:160px 1fr;gap:24px;padding:18px 0;border-top:1px solid rgba(255,255,255,.18)"><strong style="color:#fff">30 ago 2027</strong><span>Consulta de Personas Políticamente Expuestas en “Consulta PEP 2.0”.</span></div>
+<div style="display:grid;grid-template-columns:160px 1fr;gap:24px;padding:18px 0;border-top:1px solid rgba(255,255,255,.18)"><strong style="color:#fff">Ene–dic 2028</strong><span>Primer periodo de revisión de auditoría.</span></div>
+<div style="display:grid;grid-template-columns:160px 1fr;gap:24px;padding:18px 0;border-top:1px solid rgba(255,255,255,.18);border-bottom:1px solid rgba(255,255,255,.18)"><strong style="color:#fff">30 mar 2029</strong><span>Entrega del primer dictamen de auditoría.</span></div>
+</div>
+</div>
+</section>
+
+<!-- 07 Puente a actividades vulnerables (solo PLD) -->
+<section style="padding-top:112px;padding-bottom:56px">
+<div class="wrap">
+<div class="tag" style="margin-bottom:16px">Solo en PLD — enlaces a las páginas de actividades vulnerables</div>
+<div style="border:1px solid #DDE4EC;padding:44px;display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:32px;align-items:center">
+<div style="display:flex;flex-direction:column;gap:10px"><h3 style="font-size:28px;line-height:1.25">Consulte su actividad vulnerable</h3><span style="font-size:15px">Obligaciones, umbrales, plazos y sanciones explicados por actividad.</span></div>
+<div style="display:flex;flex-wrap:wrap;gap:10px">
+<a class="pill" href="05-actividad-vulnerable.html">Compraventa de inmuebles</a>
+<a class="pill" href="05-actividad-vulnerable.html">Comercialización de vehículos</a>
+<a class="pill" href="05-actividad-vulnerable.html">Activos virtuales</a>
+<a class="pill" href="05-actividad-vulnerable.html" style="border-style:dashed;color:#005E9D">Ver todas →</a>
+</div>
+</div>
+</div>
+</section>
+
+<!-- 08 Preguntas frecuentes -->
+<section id="faq" style="padding-top:56px;padding-bottom:112px">
+<div class="wrap" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:64px;align-items:start">
+<div style="display:flex;flex-direction:column;gap:18px">
+<span class="eb">Preguntas frecuentes</span>
+<h2 style="font-size:40px;line-height:1.15">Lo que más nos preguntan</h2>
+<div class="tag" style="align-self:flex-start">Acordeón funcional en Play · respuestas a validar por el despacho</div>
+</div>
+<div style="display:flex;flex-direction:column;border-bottom:1px solid #DDE4EC">
+<sc-for list="{{faqs}}" as="f" hint-placeholder-count="5">
+<div>
+<button class="faq" type="button" onClick="{{f.toggle}}" aria-expanded="{{f.expanded}}"><span>{{f.q}}</span><span aria-hidden="true" style="font-size:24px;font-weight:400;color:#005E9D">{{f.icon}}</span></button>
+<sc-if value="{{f.open}}" hint-placeholder-val="{{false}}">
+<p style="margin:0;padding:0 0 22px;font-size:15px;line-height:1.8;max-width:620px">{{f.a}}</p>
+</sc-if>
+</div>
+</sc-for>
+</div>
+</div>
+</section>
+
+<!-- 09 Marco normativo -->
+<section style="padding-bottom:112px">
+<div class="wrap">
+<div style="background:#F1F5F9;padding:36px 40px;display:flex;flex-direction:column;gap:12px">
+<span class="lbl" style="color:#16325B">Marco normativo de referencia</span>
+<p style="margin:0;font-size:14px;line-height:1.85">Ley Federal para la Prevención e Identificación de Operaciones con Recursos de Procedencia Ilícita, artículos 17 y 18, con reforma publicada en el Diario Oficial de la Federación el 16 de julio de 2025; Reglamento de dicha Ley, modificado el 27 de marzo de 2026; Reglas de Carácter General modificadas mediante Acuerdo 115/2026, publicado el 7 de agosto de 2026; y resoluciones que modifican los formatos oficiales de alta y registro y de avisos e informes, publicadas el 24 de septiembre de 2026. Las obligaciones particulares se determinan para cada actividad y operación.</p>
+</div>
+</div>
+</section>
+
+<!-- 10 Artículos relacionados -->
+<section style="padding-top:112px;padding-bottom:112px">
+<div class="wrap">
+<div class="tag" style="margin-bottom:20px">Últimos 3 artículos de la categoría del servicio · automático desde el blog</div>
+<div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:48px">
+<div style="display:flex;flex-direction:column;gap:18px"><span class="eb">Blog</span><h2 style="font-size:44px;line-height:1.15">Artículos sobre Prevención de Lavado de Dinero</h2></div>
+<a class="lnk" href="06-blog.html">Ver todos los artículos <span aria-hidden="true">→</span></a>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:32px">
+<a href="07-blog-articulo.html" style="display:flex;flex-direction:column;gap:14px;text-decoration:none;color:#3A4552"><span class="ph" style="height:230px;display:block"><span class="phc">Foto · Documentos regulatorios y firma</span></span><span class="lbl">Prevención de Lavado de Dinero</span><span style="font-family:'Source Serif 4',Georgia,serif;font-size:24px;line-height:1.3;color:#16325B">Reforma a la LFPIORPI: qué cambia y cuándo debe cumplir su empresa</span><span style="font-size:13px;color:#5B6873">[Autor] · [Fecha] · 7 min de lectura</span></a>
+<a href="07-blog-articulo.html" style="display:flex;flex-direction:column;gap:14px;text-decoration:none;color:#3A4552"><span class="ph" style="height:230px;display:block"><span class="phc">Foto · Expedientes y revisión de documentos</span></span><span class="lbl">Prevención de Lavado de Dinero</span><span style="font-family:'Source Serif 4',Georgia,serif;font-size:24px;line-height:1.3;color:#16325B">Autorregularización espontánea: cómo corregir omisiones antes de una visita</span><span style="font-size:13px;color:#5B6873">[Autor] · [Fecha] · 6 min de lectura</span></a>
+<a href="07-blog-articulo.html" style="display:flex;flex-direction:column;gap:14px;text-decoration:none;color:#3A4552"><span class="ph" style="height:230px;display:block"><span class="phc">Foto · Pantalla con operaciones digitales</span></span><span class="lbl">Actividades vulnerables</span><span style="font-family:'Source Serif 4',Georgia,serif;font-size:24px;line-height:1.3;color:#16325B">Activos virtuales: nuevas obligaciones a partir de mayo de 2027</span><span style="font-size:13px;color:#5B6873">[Autor] · [Fecha] · 5 min de lectura</span></a>
+</div>
+</div>
+</section>
+
+<!-- 11 CTA -->
+<section style="background:#F1F5F9;padding-top:112px;padding-bottom:112px">
+<div class="wrap" style="max-width:860px;text-align:center;display:flex;flex-direction:column;gap:22px;align-items:center">
+<div class="tag">CTA — abre Contacto con “Servicio de interés” = PLD</div>
+<span class="eb">Contacto</span>
+<h2 style="font-size:44px;line-height:1.15">Conversemos sobre las obligaciones de su actividad</h2>
+<p style="margin:0;font-size:17px;line-height:1.8;max-width:680px">Le ayudamos a identificar qué debe cumplir, cómo acreditarlo y en qué plazos. Atendemos en todo México en línea y con reuniones presenciales bajo cita.</p>
+<div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center"><a class="btn" href="08-contacto.html">Solicitar asesoría en PLD</a><a class="btn2" href="https://wa.me/523339079868">Escribir por WhatsApp</a></div>
+</div>
+</section>
+
+<footer style="position:relative;overflow:hidden;background:#0E2342;color:#B9C6D6;font-size:14px">
+<div class="fimg" aria-hidden="true"></div>
+<div class="wrap" style="position:relative;z-index:1;padding-top:104px;padding-bottom:40px">
+<div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:64px">
+<div style="flex:1 1 340px;max-width:440px;display:flex;flex-direction:column;gap:30px;align-items:flex-start">
+<img src="../../src/assets/brand/logo-horizontal-blanco.png" alt="Impulsa Patrimonial · Asesoría legal y fiscal" style="height:60px;width:auto;display:block">
+<p style="margin:0;font-family:'Source Serif 4',Georgia,serif;font-size:30px;line-height:1.3;color:#fff">Impulsamos el crecimiento de las empresas con seguridad jurídica y patrimonial.</p>
+<a class="btno" href="08-contacto.html">Agendar asesoría <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"></path></svg></a>
+</div>
+<div class="fcols" style="flex:1 1 520px;max-width:600px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:48px 56px">
+<div style="display:flex;flex-direction:column;gap:44px">
+<div style="display:flex;flex-direction:column;gap:12px"><span class="fh">Sitio</span><a class="fl" href="01-inicio.html">Inicio</a><a class="fl" href="02-quienes-somos.html">Quiénes somos</a><a class="fl" href="03-servicios.html">Servicios</a><a class="fl" href="05-actividad-vulnerable.html">Actividades vulnerables</a><a class="fl" href="06-blog.html">Blog</a><a class="fl" href="08-contacto.html">Contacto</a></div>
+<div style="display:flex;flex-direction:column;gap:12px"><span class="fh">Servicios</span><a class="fl" href="04-servicio-pld.html">Prevención de Lavado de Dinero</a><a class="fl" href="04-servicio-pld.html">Precios de Transferencia</a><a class="fl" href="04-servicio-pld.html">Legal Corporativo</a><a class="fl" href="03-servicios.html">Complementarios</a></div>
+</div>
+<div style="display:flex;flex-direction:column;gap:44px">
+<div style="display:flex;flex-direction:column;gap:12px"><span class="fh">Oficinas</span><span>Ciudad de México</span><span>Guadalajara</span><span>Morelia</span><span>Querétaro</span><span style="color:#fff;margin-top:6px;padding-top:12px;border-top:1px solid rgba(255,255,255,.18)">Atención en línea en todo México</span></div>
+<div style="display:flex;flex-direction:column;gap:12px"><span class="fh">Contacto</span><a class="fl" href="https://wa.me/523339079868">+52 33 3907 9868</a><a class="fl" href="mailto:contacto@impulsapatrimonial.com" style="overflow-wrap:anywhere">contacto@impulsapatrimonial.com</a>
+<div style="display:flex;gap:10px;margin-top:8px">
+<a class="soc" href="https://www.instagram.com/" aria-label="Instagram de Impulsa Patrimonial"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="0.8"></circle></svg></a>
+<a class="soc" href="https://www.linkedin.com/" aria-label="LinkedIn de Impulsa Patrimonial"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M8 10v7M8 7v.01M12 17v-7M12 13a3 3 0 0 1 6 0v4"></path></svg></a>
+<a class="soc" href="https://wa.me/523339079868" aria-label="WhatsApp de Impulsa Patrimonial"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"></path><path d="M9 9.5c.3 1.8 1.7 3.4 3.5 4l1.2-1.2 2 1-.4 1.6c-3.6.3-7.2-3.1-7.1-6.6L9.8 8l1 2z"></path></svg></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div style="border-top:1px solid rgba(255,255,255,.16);margin-top:80px;padding-top:24px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;font-size:13px">
+<span>© 2026 Impulsa Patrimonial · Diseñado por <a href="https://docabyte.com" style="color:#fff;font-weight:600;text-decoration:none">Docabyte</a></span>
+<span style="display:flex;flex-wrap:wrap;gap:24px"><a class="fl" href="09-legales.html">Aviso de privacidad</a><a class="fl" href="09-legales.html">Términos de uso</a><a class="fl" href="09-legales.html">Política de cookies</a><a class="fl" href="09-legales.html">Descargo de responsabilidad</a></span>
+</div>
+</div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"anotaciones":{"editor":"boolean","default":true},"$preview":{"width":1440,"height":7000}}'>
+class Component extends DCLogic {
+constructor(props) {
+super(props);
+this.state = { scrolled: false, open: 0 };
+}
+componentDidMount() {
+this._onScroll = () => {
+const y = window.pageYOffset || (document.documentElement && document.documentElement.scrollTop) || 0;
+const s = y > 48;
+if (s !== this.state.scrolled) this.setState({ scrolled: s });
+};
+window.addEventListener('scroll', this._onScroll, { passive: true });
+this._onScroll();
+}
+componentWillUnmount() {
+window.removeEventListener('scroll', this._onScroll);
+}
+renderVals() {
+const show = this.props.anotaciones ?? true;
+const items = [
+{ q: '¿Cómo sé si mi actividad es vulnerable?', a: 'Analizamos sus operaciones y su modelo de negocio frente a las actividades del artículo 17 de la Ley, así como los umbrales y supuestos aplicables. El diagnóstico identifica sus obligaciones y las prioridades de atención.' },
+{ q: '¿Qué pasa si omití avisos u otras obligaciones?', a: 'La Ley prevé la autorregularización espontánea antes de que inicien las facultades de verificación, lo que permite acceder a la abstención de sanción del artículo 55. Le ayudamos a determinar las omisiones e integrar el cumplimiento correspondiente.' },
+{ q: '¿Cuándo entran en vigor las nuevas obligaciones?', a: 'La entrada en vigor es gradual: las Reglas aplican de forma general desde el 30 de noviembre de 2026 y otras obligaciones se exigen entre 2027 y 2029, como el enfoque basado en riesgo, los mecanismos automatizados y el dictamen de auditoría.' },
+{ q: '¿Desarrollan el software para los mecanismos automatizados?', a: 'No. Asesoramos en los requerimientos funcionales que deben atender los mecanismos automatizados, su documentación y sus pruebas de funcionamiento, sin ofrecer el desarrollo de software.' },
+{ q: '¿Atienden fuera de las ciudades donde tienen oficina?', a: 'Sí. Atendemos en línea a empresas de todo México y ofrecemos reuniones presenciales bajo cita en Ciudad de México, Guadalajara, Morelia y Querétaro.' }
+];
+const faqs = items.map((it, i) => {
+const open = this.state.open === i;
+return { q: it.q, a: it.a, open, expanded: open ? 'true' : 'false', icon: open ? '−' : '+', toggle: () => this.setState({ open: open ? -1 : i }) };
+});
+return { notesClass: show ? '' : 'no-notes', navTop: !this.state.scrolled, navScrolled: this.state.scrolled, faqs };
+}
+}
+</script>
+</body>
+</html>

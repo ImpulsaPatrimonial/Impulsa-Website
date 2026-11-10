@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Navbar — estados</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400&amp;family=Montserrat:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@400&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#16325B}a:hover{color:#005E9D}
+.lb{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:#9B1C6C}
+</style>
+</helmet>
+<div style="width:1440px;height:560px;box-sizing:border-box;padding:48px 56px;background:#F1F5F9;font-family:'Montserrat',system-ui,sans-serif;display:flex;flex-direction:column;gap:28px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<span class="lb">1 · Estado inicial — transparente sobre el hero, logotipo horizontal en blanco</span>
+<div style="position:relative;height:150px;overflow:hidden;background:linear-gradient(180deg,rgba(12,28,52,.6),rgba(12,28,52,.3)),repeating-linear-gradient(115deg,rgba(255,255,255,.03) 0 2px,transparent 2px 26px),linear-gradient(125deg,#3A6496,#1D4070 45%,#0E2342)">
+<div style="display:flex;align-items:center;justify-content:space-between;gap:20px;padding:22px 40px;border-bottom:1px solid rgba(255,255,255,.14)">
+<img src="../../src/assets/brand/logo-horizontal-blanco.png" alt="Impulsa Patrimonial · Asesoría legal y fiscal" style="height:42px;width:auto;display:block">
+<div style="display:flex;gap:32px;font-size:14px;color:rgba(255,255,255,.86)"><span style="color:#fff;font-weight:600;box-shadow:inset 0 -1px 0 #fff;padding-bottom:4px">Inicio</span><span>Quiénes somos</span><span>Servicios ▾</span><span>Actividades vulnerables</span><span>Blog</span></div>
+<span style="display:inline-flex;align-items:center;min-height:46px;padding:0 22px;background:#fff;color:#16325B;font-weight:600;font-size:14px">Contactar ↗</span>
+</div>
+</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px">
+<span class="lb">2 · Al hacer scroll (&gt;48 px) — blanco translúcido 88 % + desenfoque 14 px + sombra suave, logotipo a color, botón azul marino</span>
+<div style="position:relative;height:150px;overflow:hidden;background:#fff">
+<div style="position:absolute;inset:0;padding:120px 40px 0;font-family:'Source Serif 4',Georgia,serif;font-size:34px;color:#C9D6E4">Contenido de la página debajo…</div>
+<div style="position:relative;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:14px 40px;background:rgba(255,255,255,.88);backdrop-filter:blur(14px);border-bottom:1px solid rgba(22,50,91,.08);box-shadow:0 8px 30px rgba(12,28,52,.08)">
+<img src="../../src/assets/brand/logo-horizontal-color.png" alt="Impulsa Patrimonial · Asesoría legal y fiscal" style="height:38px;width:auto;display:block">
+<div style="display:flex;gap:32px;font-size:14px;color:#16325B"><span style="color:#005E9D;font-weight:600;box-shadow:inset 0 -1px 0 #005E9D;padding-bottom:4px">Inicio</span><span>Quiénes somos</span><span>Servicios ▾</span><span>Actividades vulnerables</span><span>Blog</span></div>
+<span style="display:inline-flex;align-items:center;min-height:44px;padding:0 22px;background:#16325B;color:#fff;font-weight:600;font-size:14px">Contactar ↗</span>
+</div>
+</div>
+</div>
+<span style="font-size:13px;color:#5B6873">Transición sugerida: 250 ms en fondo, sombra y altura (22 → 14 px de padding). En Play, las páginas ya cambian de estado al hacer scroll.</span>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":560}}'>
+class Component extends DCLogic {
+renderVals() {
+return {};
+}
+}
+</script>
+</body>
+</html>
